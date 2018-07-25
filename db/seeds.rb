@@ -8,7 +8,7 @@
 
 users_attributes = [
   {
-    is_admin: false, role: 'NOTIFICATION',
+    role: 'NOTIFICATION',
     email: 'notifications@moon.shop', password: 'Moon@2018', password_confirmation: 'Moon@2018'
   },
   {
@@ -18,12 +18,10 @@ users_attributes = [
   {
     role: 'SUPER_ADMIN',
     email: 'votanphu.2101@gmail.com', password: 'sunny123', password_confirmation: 'sunny123'
-  },
+  }
 ]
 
 users_attributes.each do |user_attributes|
   user = AdminUser.new(user_attributes)
-  user.skip_confirmation!
   user.save! if AdminUser.where(email: user_attributes[:email]).first.blank?
 end
-
