@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180715151025) do
+ActiveRecord::Schema.define(version: 20180725051539) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,36 @@ ActiveRecord::Schema.define(version: 20180715151025) do
     t.string "role", default: "ADMIN"
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name_vn"
+    t.string "name_en"
+    t.string "price"
+    t.text "description_vn"
+    t.text "description_en"
+    t.string "schedule_vn"
+    t.string "schedule_en"
+    t.string "summary_vn"
+    t.string "summary_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "thumbnail_image_file_name"
+    t.string "thumbnail_image_content_type"
+    t.integer "thumbnail_image_file_size"
+    t.datetime "thumbnail_image_updated_at"
+    t.string "represent_image_1_file_name"
+    t.string "represent_image_1_content_type"
+    t.integer "represent_image_1_file_size"
+    t.datetime "represent_image_1_updated_at"
+    t.string "represent_image_2_file_name"
+    t.string "represent_image_2_content_type"
+    t.integer "represent_image_2_file_size"
+    t.datetime "represent_image_2_updated_at"
+    t.string "represent_image_3_file_name"
+    t.string "represent_image_3_content_type"
+    t.integer "represent_image_3_file_size"
+    t.datetime "represent_image_3_updated_at"
   end
 
 end
