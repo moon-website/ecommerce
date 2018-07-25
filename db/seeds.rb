@@ -18,11 +18,10 @@ users_attributes = [
   {
     role: 'SUPER_ADMIN',
     email: 'votanphu.2101@gmail.com', password: 'sunny123', password_confirmation: 'sunny123'
-  },
+  }
 ]
 
 users_attributes.each do |user_attributes|
   user = AdminUser.new(user_attributes)
   user.save! if AdminUser.where(email: user_attributes[:email]).first.blank?
 end
-
