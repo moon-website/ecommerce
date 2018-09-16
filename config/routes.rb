@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'services/index'
   get 'contact', to: 'pages#contact', as: 'contact'
   get 'about', to: 'pages#about', as: 'about'
 
