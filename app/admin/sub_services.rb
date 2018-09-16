@@ -1,5 +1,5 @@
-ActiveAdmin.register Service do
-  permit_params :image, :title_vn, :title_en, :description_vn, :description_en, :order
+ActiveAdmin.register SubService do
+  permit_params :image, :title_vn, :title_en, :description_vn, :description_en, :price
 
   index do
     selectable_column
@@ -17,6 +17,7 @@ ActiveAdmin.register Service do
       f.input :title_vn
       f.input :description_en
       f.input :description_vn
+      f.input :price
     end
 
     f.inputs "Images" do
