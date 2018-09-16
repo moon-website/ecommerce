@@ -1,5 +1,5 @@
 ActiveAdmin.register Service do
-  permit_params :image, :title_vn, :title_en, :description_vn, :description_en, :order
+  permit_params :image, :title_vn, :title_en, :description_vn, :description_en
 
   index do
     selectable_column

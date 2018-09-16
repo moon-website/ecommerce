@@ -1,5 +1,5 @@
 ActiveAdmin.register SubService do
-  permit_params :image, :title_vn, :title_en, :description_vn, :description_en, :price
+  permit_params :image, :title_vn, :title_en, :service_id, :description_vn, :description_en, :price
 
   index do
     selectable_column
@@ -18,6 +18,7 @@ ActiveAdmin.register SubService do
       f.input :description_en
       f.input :description_vn
       f.input :price
+      f.input :service_id, :label => 'Service', :as => :select, :collection => Service.all.map{|s| ["#{s.title_vn}", s.id]}
     end
 
     f.inputs "Images" do
