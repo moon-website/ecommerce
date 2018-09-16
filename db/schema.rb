@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180725051539) do
+ActiveRecord::Schema.define(version: 20180916141954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,6 +75,36 @@ ActiveRecord::Schema.define(version: 20180725051539) do
     t.string "represent_image_3_content_type"
     t.integer "represent_image_3_file_size"
     t.datetime "represent_image_3_updated_at"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "title_vn"
+    t.string "title_en"
+    t.string "order"
+    t.text "description_vn"
+    t.text "description_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+  end
+
+  create_table "sub_services", force: :cascade do |t|
+    t.string "title_vn"
+    t.string "title_en"
+    t.string "price"
+    t.text "description_vn"
+    t.text "description_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.bigint "service_id"
+    t.index ["service_id"], name: "index_sub_services_on_service_id"
   end
 
 end

@@ -13,6 +13,9 @@ gem 'devise', '~> 4.4.3'
 gem 'draper', '~> 3.0.1'
 gem 'pundit', '~> 1.1.0'
 
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'
 gem 'paperclip'

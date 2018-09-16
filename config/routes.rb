@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  get 'services', to: 'services#index', as: 'services'
+  get 'contact', to: 'pages#contact', as: 'contact'
+  get 'about', to: 'pages#about', as: 'about'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'home#index'
