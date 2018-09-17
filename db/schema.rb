@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180916141954) do
+ActiveRecord::Schema.define(version: 20180917140927) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +89,22 @@ ActiveRecord::Schema.define(version: 20180916141954) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.string "thumbnail_image_file_name"
+    t.string "thumbnail_image_content_type"
+    t.integer "thumbnail_image_file_size"
+    t.datetime "thumbnail_image_updated_at"
+    t.string "represent_image_1_file_name"
+    t.string "represent_image_1_content_type"
+    t.integer "represent_image_1_file_size"
+    t.datetime "represent_image_1_updated_at"
+    t.string "represent_image_2_file_name"
+    t.string "represent_image_2_content_type"
+    t.integer "represent_image_2_file_size"
+    t.datetime "represent_image_2_updated_at"
+    t.string "represent_image_3_file_name"
+    t.string "represent_image_3_content_type"
+    t.integer "represent_image_3_file_size"
+    t.datetime "represent_image_3_updated_at"
   end
 
   create_table "sub_services", force: :cascade do |t|

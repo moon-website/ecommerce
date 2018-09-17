@@ -1,9 +1,9 @@
 ActiveAdmin.register Service do
-  permit_params :image, :title_vn, :title_en, :description_vn, :description_en
-
+  permit_params :order, :image, :title_vn, :title_en, :description_vn, :description_en,
+  :thumbnail_image, :represent_image_1, :represent_image_2, :represent_image_3
   index do
     selectable_column
-    column :id
+    column :order
     column :title_en
     column :title_vn
     column :description_en
@@ -13,6 +13,7 @@ ActiveAdmin.register Service do
 
   form do |f|
     f.inputs "General Information" do
+      f.input :order
       f.input :title_en
       f.input :title_vn
       f.input :description_en
@@ -21,6 +22,10 @@ ActiveAdmin.register Service do
 
     f.inputs "Images" do
       f.input :image, as: :file
+      # f.input :thumbnail_image, as: :file
+      f.input :represent_image_1, as: :file
+      f.input :represent_image_2, as: :file
+      f.input :represent_image_3, as: :file
     end
     f.actions
   end
