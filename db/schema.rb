@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180918143535) do
+ActiveRecord::Schema.define(version: 20180919131445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -130,6 +130,8 @@ ActiveRecord::Schema.define(version: 20180918143535) do
     t.string "represent_image_3_content_type"
     t.integer "represent_image_3_file_size"
     t.datetime "represent_image_3_updated_at"
+    t.text "greating_vn"
+    t.text "greating_en"
   end
 
   create_table "sub_services", force: :cascade do |t|

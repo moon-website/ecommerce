@@ -144,64 +144,18 @@
   <div class="container">
     <h1 class="text-center">CÁC SẢN PHẨM BÁN CHẠY TẠI MOON</h1>
     <div class="hr-line-big mx-auto my-5"></div>
-    <h3>EYEBROWS</h3>
-    <hr>
-    <div class="row">
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/tech" alt="prod-1">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
+    <% @categories.each do |cat| %>
+      <h3><%= cat.name_vn%></h3>
+      <hr>
+      <div class="row">
+        <% cat.products.limit(3).each do |product|%>
+          <div class="col text-center">
+            <%= image_tag(product.image.url, size: "300x400", alt: "product image")%>
+            <p><%= product.name_vn %></p>
+            <p><%= product.price %></p>
+          </div>
+        <% end %>
       </div>
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/tech" alt="prod-2">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/tech" alt="prod-3">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-    </div>
-
-    <h3>Hair Care</h3>
-    <hr>
-    <div class="row">
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/arch" alt="prod-1">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/arch" alt="prod-2">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/arch" alt="prod-3">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-    </div>
-
-    <h3>Skin Care</h3>
-    <hr>
-    <div class="row">
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/people" alt="prod-1">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/people" alt="prod-2">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-      <div class="col text-center">
-        <img src="https://placeimg.com/300/400/people" alt="prod-3">
-        <p>Nourishing Hair Wash - 250ml</p>
-        <p>$26,95</p>
-      </div>
-    </div>
+    <% end %>
   </div>
 </section>
