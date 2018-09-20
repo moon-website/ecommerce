@@ -1,17 +1,16 @@
+<% service = @services.first %>
 <section id="services" class="my-5 pt-5">
   <div class="container">
     <div class="row mt-5">
       <div class="col">
         <div class="service-title-2">
-          <h2 class="text">Moon Eyelashes</h2>
-          <span class="number">02</span>
+          <h2 class="text"><%=service.title_vn%></h2>
+          <span class="number"><%=service.priority %></span>
         </div>
       </div>
       <div class="col">
         <ul class="text-left">
-          <li>Khi bạn gặp vấn đề với lông mày của mình, chọn sai nơi làm cho mình. Bạn đã chỉnh sửa nhưng chưa vừa ý</li>
-          <li>Bạn muốn thay đổi đang cho hợp với gương mặt theo tỷ lệ vàng</li>
-          <li>Đừng lo lắng hãy đến với Moon Eyebrows, Nghi Nguyen và Team Moon sẽ giúp bạn chỉnh sửa cho bạn, giúp bạn có 1 cặp</li>
+          <%=service.description_vn.html_safe%>
         </ul>
         <a href="" class="pricing">Xem bản giá</a>
         <div style="width: 400px;" class="find-more-wrapper mt-5 pl-3 pt-2">
@@ -24,47 +23,29 @@
     </div>
 
     <div class="hr-line-big mx-auto my-5"></div>
-
-    <div class="row img-row pt-5 my-5">
-      <div class="col">
-        <p>NỐI MI ONE BY ONE – ONE BY ONE EYELASH</p>
-        <h5>500.000 VND</h5>
-        <p>Dành cho những bạn thử nối mi lần đầu, hoặc những bạn yêu thích sự tự nhiên, mong manh.</p>
-        <p>Nối mi One by One là kỹ thuật đính 1 sợi mi giả lên 1 sợi mi thật. Mang lại nét đẹp trong trẻo, thuần khiết, phù hợp với mọi dáng mắt. Có thể mix sole ngắn dài để trông càng tự nhiên hơn.</p>
-        <div style="width: 144px;" class="find-more-wrapper mt-5 pl-3 pt-2">
-          <h4 class="find-more">
-            Đặt lịch
-            <div style="width: 110px;" class="hr-line-pink"></div>
-          </h4>
+    <% if service.sub_services.present?%>
+      <% subs = service.sub_services %>
+      <% subs.each do |sub|%>
+        <div class="row img-row pt-5 my-5">
+          <div class="col">
+            <p><%= sub.title_vn %></p>
+            <h5><%= sub.price %></h5>
+            <%= sub.description_vn.html_safe %>
+            <div style="width: 144px;" class="find-more-wrapper mt-5 pl-3 pt-2">
+              <h4 class="find-more">
+                Đặt lịch
+                <div style="width: 110px;" class="hr-line-pink"></div>
+              </h4>
+            </div>
+          </div>
+          <div class="col">
+            <%= image_tag(sub.image.url, size: "480x440")%>
+          </div>
         </div>
-      </div>
-      <div class="col">
-        <img src="https://placeimg.com/480/440/any"/>
-      </div>
-    </div>
 
-    <hr>
-
-    <div class="row img-row pt-5 my-5">
-      <div class="col">
-        <p>NỐI MI ONE BY ONE – ONE BY ONE EYELASH</p>
-        <h5>500.000 VND</h5>
-        <p>Dành cho những bạn thử nối mi lần đầu, hoặc những bạn yêu thích sự tự nhiên, mong manh.</p>
-        <p>Nối mi One by One là kỹ thuật đính 1 sợi mi giả lên 1 sợi mi thật. Mang lại nét đẹp trong trẻo, thuần khiết, phù hợp với mọi dáng mắt. Có thể mix sole ngắn dài để trông càng tự nhiên hơn.</p>
-        <div style="width: 144px;" class="find-more-wrapper mt-5 pl-3 pt-2">
-          <h4 class="find-more">
-            Đặt lịch
-            <div style="width: 110px;" class="hr-line-pink"></div>
-          </h4>
-        </div>
-      </div>
-      <div class="col">
-        <img src="https://placeimg.com/480/440/any"/>
-      </div>
-    </div>
-
-    <hr>
-
+        <hr>
+      <% end %>
+    <% end %>
   </div>
 </section>
 
@@ -110,20 +91,30 @@
   <hr/>
 
     <div class="row">
-      <div class="col page-prev d-flex flex-row">
-        <img src="https://placeimg.com/250/300/any"/>
-        <div class="txt-wrapper mx-3 mt-5 d-flex flex-column">
-          <h2>Nails</h2>
-          <a href="" class="btn-prev">Previous</a>
+      <% if service.priority != "01" %>
+        <% pre_service = Service.get_previous_service(service.priority) %>
+        <div class="col page-prev d-flex flex-row">
+          <%= image_tag(pre_service.image.url, size: "250x300")%>
+          <div class="txt-wrapper mx-3 mt-5 d-flex flex-column">
+            <h2><%= pre_service.title_vn %></h2>
+            <a href="" class="btn-prev">Previous</a>
+          </div>
         </div>
-      </div>
-      <div class="col page-next d-flex flex-row-reverse">
-        <img src="https://placeimg.com/250/300/any"/>
-        <div class="txt-wrapper mx-3 mt-5 d-flex flex-column">
-          <h2>Eyebrows</h2>
-          <a href="" class="brn-next">Next</a>
+      <% end %>
+
+      <% if service.priority != @last_service.priority %>
+        <% next_service = Service.get_next_service(service.priority) %>
+        <div class="col page-next d-flex flex-row-reverse">
+          <%= image_tag(next_service.image.url, size: "250x300")%>
+          <div class="txt-wrapper mx-3 mt-5 d-flex flex-column">
+            <h2><%= next_service.title_vn %></h2>
+            <a href="" class="btn-next">Next</a>
+          </div>
         </div>
-      </div>
+        <% end %>
     </div>
   </div>
 </section>
+<div class="pagination-service hidden">
+<%= will_paginate @services %>
+</div>

@@ -15,4 +15,14 @@ class Service < ApplicationRecord
   def self.random_service
     Service.offset(rand Service.count).first
   end
+
+  def self.get_previous_service(priority)
+    pre_priority = "0"+ (priority.to_i - 1).to_s
+    Service.find_by_priority(pre_priority)
+  end
+
+  def self.get_next_service(priority)
+    next_priority = "0"+ (priority.to_i + 1).to_s
+    Service.find_by_priority(next_priority)
+  end
 end

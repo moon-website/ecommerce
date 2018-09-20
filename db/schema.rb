@@ -105,7 +105,7 @@ ActiveRecord::Schema.define(version: 20180919131445) do
   create_table "services", force: :cascade do |t|
     t.string "title_vn"
     t.string "title_en"
-    t.string "order"
+    t.string "priority"
     t.text "description_vn"
     t.text "description_en"
     t.datetime "created_at", null: false

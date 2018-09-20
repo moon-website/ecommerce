@@ -28,7 +28,7 @@ end
 
 services_attributes = [
   {
-    order: "03",
+    priority: "03",
     title_vn: "Dịch vụ Nails",
     description_en: "",
     greating_vn: "Với niềm đam mê và sáng tạo trong nghệ thuật, MOON tự tin sẽ mang đến cho đôi tay của bạn vẻ đẹp hoàn hảo từ những chi tiết nhỏ cho đến các họa tiết sắc sảo được thiết kế độc đáo trên những chiếc móng nhỏ xinh. Với hàng ngàn mẫu móng đa dạng, đặc sắc, luôn cập nhật xu hướng mới nhất, Moon Nails sẽ làm cho đôi tay bạn trở nên ấn tượng, lộng lẫy nhưng không kém phần kiêu sa trong những buổi dạ tiệc hoặc cực kì trẻ trung khi dạo phố cuối tuần cùng bạn bè.",
@@ -39,7 +39,7 @@ services_attributes = [
     represent_image_3: open('https://placeimg.com/350/350/animals')
   },
   {
-    order: "01",
+    priority: "01",
     title_vn: "Moon Eye Brown",
     description_en: "",
     greating_vn: "<li>Khi bạn gặp vấn đề với lông mày của mình, chọn sai nơi làm cho mình.</li> <li>Bạn đã chỉnh sửa nhưng chưa vừa ý</li> <li>Bạn muốn thay đổi đang cho hợp với gương mặt theo tỷ lệ vàng</li> <li>Đừng lo lắng hãy đến với Moon Eyebrows , Nghi Nguyen và Team Moon sẽ giúp bạn chỉnh sửa cho bạn, giúp bạn có 1 cặp lông</li> <li>Chuyên gia chỉnh sửa lông mày Nghi Nguyen cùng Team Moon hoan nghênh chào đón.</li>",
@@ -51,7 +51,7 @@ services_attributes = [
   },
 
   {
-    order: "02",
+    priority: "02",
     title_vn: "Moon Eyelashes",
     description_en: " <li>Khi bạn gặp vấn đề với lông mày của mình, chọn sai nơi làm cho mình. Bạn đã chỉnh sửa nhưng chưa vừa ý</li>
     <li>Bạn muốn thay đổi đang cho hợp với gương mặt theo tỷ lệ vàng</li>

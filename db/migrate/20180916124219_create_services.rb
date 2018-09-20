@@ -3,7 +3,7 @@ class CreateServices < ActiveRecord::Migration[5.1]
     create_table :services do |t|
       t.string :title_vn
       t.string :title_en
-      t.string :order
+      t.string :priority
       t.text :description_vn
       t.text :description_en
 
