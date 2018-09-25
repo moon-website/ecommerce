@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :category
-  has_attached_file :image
+  has_attached_file :image, default_url: "https://placeimg.com/300/400/any"
 
   validates_attachment_content_type :image, :content_type => ["text/html", "image/svg+xml", "image/jpg", "image/jpeg", "image/png", "image/gif"]
 
@@ -12,8 +12,7 @@ class Product < ApplicationRecord
         description_vn: description_vn,
         name_vn: Faker::Cat.breed,
         price: (rand(1..100)*10000).to_s + " VND",
-        category: Category.random_category,
-        image: open("https://placeimg.com/300/400/any")
+        category: Category.random_category
       )
     end
   end
