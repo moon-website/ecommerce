@@ -68,8 +68,8 @@ if Service.count == 0
   services_attributes.each do |service_attributes|
     service = Service.create(service_attributes)
   end
-  SubService.generate_sub_services(30)
-  puts "you've create 3 services and 30 sub services "
+  SubService.generate_sub_services(12)
+  puts "you've create 3 services and 12 sub services "
 end
 
 
@@ -132,7 +132,7 @@ if Category.count == 0
     Category.create(category_attributes)
   end
 
-  Product.generate_products(30)
-  puts "you've create 3 categories and 30 products"
+  Product.generate_products(12)
+  puts "you've create 3 categories and 12 products"
 end
 

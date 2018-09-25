@@ -1,3 +1,4 @@
+# Initialize if we use will_paginate
 if defined?(WillPaginate)
   module WillPaginate
     module ActiveRecord
