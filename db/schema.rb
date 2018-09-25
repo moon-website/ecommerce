@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180916141954) do
+ActiveRecord::Schema.define(version: 20180919131445) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(version: 20180916141954) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string "name_vn"
+    t.string "name_en"
+    t.text "description_vn"
+    t.text "description_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name_vn"
     t.string "name_en"
@@ -61,34 +70,68 @@ ActiveRecord::Schema.define(version: 20180916141954) do
     t.datetime "updated_at", null: false
     t.string "thumbnail_image_file_name"
     t.string "thumbnail_image_content_type"
-    t.integer "thumbnail_image_file_size"
+    t.bigint "thumbnail_image_file_size"
     t.datetime "thumbnail_image_updated_at"
     t.string "represent_image_1_file_name"
     t.string "represent_image_1_content_type"
-    t.integer "represent_image_1_file_size"
+    t.bigint "represent_image_1_file_size"
     t.datetime "represent_image_1_updated_at"
     t.string "represent_image_2_file_name"
     t.string "represent_image_2_content_type"
-    t.integer "represent_image_2_file_size"
+    t.bigint "represent_image_2_file_size"
     t.datetime "represent_image_2_updated_at"
     t.string "represent_image_3_file_name"
     t.string "represent_image_3_content_type"
-    t.integer "represent_image_3_file_size"
+    t.bigint "represent_image_3_file_size"
     t.datetime "represent_image_3_updated_at"
   end
 
-  create_table "services", force: :cascade do |t|
-    t.string "title_vn"
-    t.string "title_en"
-    t.string "order"
+  create_table "products", force: :cascade do |t|
+    t.string "name_vn"
+    t.string "name_en"
+    t.string "price"
     t.text "description_vn"
     t.text "description_en"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image_file_name"
     t.string "image_content_type"
-    t.integer "image_file_size"
+    t.bigint "image_file_size"
     t.datetime "image_updated_at"
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
+  end
+
+  create_table "services", force: :cascade do |t|
+    t.string "title_vn"
+    t.string "title_en"
+    t.string "priority"
+    t.text "description_vn"
+    t.text "description_en"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
+    t.string "thumbnail_image_file_name"
+    t.string "thumbnail_image_content_type"
+    t.bigint "thumbnail_image_file_size"
+    t.datetime "thumbnail_image_updated_at"
+    t.string "represent_image_1_file_name"
+    t.string "represent_image_1_content_type"
+    t.bigint "represent_image_1_file_size"
+    t.datetime "represent_image_1_updated_at"
+    t.string "represent_image_2_file_name"
+    t.string "represent_image_2_content_type"
+    t.bigint "represent_image_2_file_size"
+    t.datetime "represent_image_2_updated_at"
+    t.string "represent_image_3_file_name"
+    t.string "represent_image_3_content_type"
+    t.bigint "represent_image_3_file_size"
+    t.datetime "represent_image_3_updated_at"
+    t.text "greating_vn"
+    t.text "greating_en"
   end
 
   create_table "sub_services", force: :cascade do |t|
@@ -101,7 +144,7 @@ ActiveRecord::Schema.define(version: 20180916141954) do
     t.datetime "updated_at", null: false
     t.string "image_file_name"
     t.string "image_content_type"
-    t.integer "image_file_size"
+    t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.bigint "service_id"
     t.index ["service_id"], name: "index_sub_services_on_service_id"

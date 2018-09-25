@@ -20,6 +20,7 @@ ActiveAdmin.register Course do
       f.input :description_vn
       f.input :schedule_en
       f.input :schedule_vn
+      f.input :price
       f.input :summary_en
       f.input :summary_vn
     end

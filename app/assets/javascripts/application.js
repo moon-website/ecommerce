@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require popper
 //= require bootstrap
+//= require services
 //no = require_tree .
