@@ -17,7 +17,7 @@ gem 'jquery-rails'
 gem 'bootstrap', '~> 4.1.3'
 gem 'will_paginate', '~> 3.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
+gem 'rails'
 gem 'paperclip'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
