@@ -1,3 +1,45 @@
 // Place all the styles related to the courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#courses .nav-tabs .current-nav-item {
+  padding-right: 32%;
+}
+
+.current-header {
+  height: 620px;
+  position: relative;
+
+  .banner-portrait {
+    position: absolute;
+    bottom: 0;
+    left: 20rem;
+    z-index: -2;
+  }
+
+  .title-teacher {
+    position: absolute;
+    top: 7rem;
+    left: 8rem;
+    z-index: -1;
+  }
+
+  .title-master {
+    position: absolute;
+    top: 10rem;
+    left: 8rem;
+    font-size: 6em;
+    font-weight: bold;
+    z-index: -1;
+  }
+
+  .title-name {
+    position: absolute;
+    top: 17rem;
+    left: 8rem;
+    font-size: 8em;
+    font-weight: bold;
+    z-index: -1;
+  }
+}
+

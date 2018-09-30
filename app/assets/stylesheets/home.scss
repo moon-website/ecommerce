@@ -13,10 +13,16 @@ body {
   }
 }
 
-header {
+.header-homepage {
   height: 650px;
   background-color: #080702;
   position: relative;
+
+  .banner-portrait {
+    position: absolute;
+    bottom: 0;
+    left: 12rem;
+  }
 }
 
 hr {
@@ -25,12 +31,6 @@ hr {
 /* .navbar {
   background-color: white;
 } */
-
-.banner-portrait {
-  position: absolute;
-  bottom: 0;
-  left: 12rem;
-}
 
 .banner-text {
   color: white;
