@@ -43,3 +43,107 @@
   }
 }
 
+.course-retros .container-fluid {
+  .container-course-infos {
+    width: 90%;
+
+    .description {
+      padding-right: 20px;
+      padding-bottom: 50px;
+      margin-top: 90px;
+    }
+  };
+
+  .container-sidebar {
+    float: right;
+    width: 9%;
+    border-left: 1em;
+    border-color: black;
+    font-size: 24px;
+    line-height: 30px;
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+
+  .container-course {
+    height: 960px;
+    border-top: 1em;
+    border-bottom: 1em;
+    border-color: #979797;
+    position: relative;
+
+    .main-description {
+      right: 1rem;
+      padding-top: 138px;
+      width: 525px;
+      height: 653px;
+      // z-index: -1;
+      position: absolute;
+
+      .line-red {
+        width: 190px;
+        height: 8px;
+        background-color:  #FF1616;
+        color: #FF1616;
+        margin-bottom: 15px;
+      }
+
+      .description {
+        height: 180px;
+        margin-top: 70px;
+        margin-bottom: 150px;
+      }
+
+      .line-black {
+        width: 243px;
+        height: 3px;
+        background-color:  #060606;
+        color: #060606;
+        margin-bottom: 32px;
+      }
+      .price-course {
+        margin-top:30px;
+      }
+
+      .apply-course {
+        width: 275px;
+        height: 52px;
+        border: solid 1px #979797;
+        text-align: left;
+        .apply-course-text {
+          color: #ff1616;
+          position: relative;
+          z-index: 1;
+          left: 10px;
+        }
+        .apply-course-shaddow {
+          width: 176px;
+          height: 16px;
+          background-color: #ffd6d9;
+          position: absolute;
+          z-index: -1;
+          top: 16px;
+          left: -10px;
+        }
+      }
+      .see-more {
+        margin-left: 34px;
+        width: 127px;
+        height: 34px;
+        color: #4A90E2;
+        text-align: left;
+        border-bottom: 2px solid #4A90E2;
+      }
+    }
+    .extra-description {
+      position: absolute;
+      top: 250px;
+    }
+    .image-course {
+      position: absolute;
+      left: 330px;
+      top: 163px;
+    }
+  }
+}
