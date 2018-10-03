@@ -46,7 +46,9 @@
 .course-retros .container-fluid {
   .container-course-infos {
     width: 90%;
-
+    .item-extra {
+      margin-bottom: 23px;
+    }
     .description {
       padding-right: 20px;
       padding-bottom: 50px;
@@ -86,7 +88,7 @@
         height: 8px;
         background-color:  #FF1616;
         color: #FF1616;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
       }
 
       .description {
@@ -144,6 +146,69 @@
       position: absolute;
       left: 330px;
       top: 163px;
+    }
+  }
+  .line-break {
+    background: #979797;
+    height: 1px;
+    width: 1800px;
+    position: absolute;
+    left: -20px;
+  }
+}
+
+// sesstion advantage
+
+.course-advantage {
+  .ad-first {
+    width:100%;
+    .main-description {
+      padding-top: 138px;
+      width: 525px;
+      height: 653px;
+      padding-left: 130px;
+
+      .line-red {
+        width: 190px;
+        height: 8px;
+        background-color:  #FF1616;
+        color: #FF1616;
+        margin-bottom: 25px;
+      }
+
+      .description {
+        height: 180px;
+        margin-top: 60px;
+        margin-bottom: 150px;
+        margin-right: 60px;
+      }
+    }
+    .image-advantage{
+      margin-top: 240px;
+    }
+  }
+
+  .ad-second {
+    margin-top: 10px;
+    position: relative;
+    height: 600px;
+    .image-advantage {
+      position: absolute;
+      top:75px;
+      left:150px;
+    }
+
+    .description {
+      .direction-line {
+        height: 2px;
+        background-color: #000000;
+        margin-right: 40px;
+        bottom: -11px;
+      }
+      position: absolute;
+      top:170px;
+      right:30px;
+      width: 50%;
     }
   }
 }
