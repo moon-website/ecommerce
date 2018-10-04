@@ -321,9 +321,37 @@
         margin-right: 60px;
       }
     }
-    .image-advantage{
+    .image-advantage {
       margin-top: 240px;
       margin-left: 70px;
+    }
+  }
+}
+
+.complete-section {
+  label {
+    padding-top:3px;
+  }
+  .filter-complete {
+    width: 260px;
+    float: right;
+    margin-right:200px;
+  }
+
+  .course {
+    width: 100%;
+    padding-top:70px;
+    .main-info {
+    padding-left:170px;
+      .image-course {
+        margin-top:30px;
+      }
+    }
+
+    .students {
+      float:right;
+      padding-top:100px;
+      padding-right:170px;
     }
   }
 }
