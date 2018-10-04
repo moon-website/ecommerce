@@ -185,13 +185,14 @@
     }
     .image-advantage{
       margin-top: 240px;
+      margin-left: 70px;
     }
   }
 
   .ad-second {
     margin-top: 10px;
     position: relative;
-    height: 600px;
+    height: 500px;
     .image-advantage {
       position: absolute;
       top:75px;
@@ -209,6 +210,120 @@
       top:170px;
       right:30px;
       width: 50%;
+    }
+  }
+
+  .ad-third {
+    margin-top: 10px;
+    position: relative;
+    height: 350px;
+    .image-ad-1 {
+      position: absolute;
+      top:87px;
+      right:652px;
+    }
+
+    .image-ad-2 {
+      position: absolute;
+      top:5px;
+      right:120px;
+    }
+
+    .description {
+      .direction-line {
+        height: 2px;
+        background-color: #000000;
+        margin-left: 40px;
+        margin-top:10px;
+        width: 157px;
+      }
+      position: absolute;
+      top:120px;
+      left:30px;
+      width: 37%;
+      .description-text {
+        text-align: left;
+      }
+    }
+  }
+
+  .ad-forth {
+    margin-top: 10px;
+    position: relative;
+    height: 500px;
+    .image-ad-1{
+      position: absolute;
+      top:75px;
+      left:100px;
+    }
+
+    .image-ad-2{
+      position: absolute;
+      top:75px;
+      left:380px;
+    }
+
+    .description {
+      .direction-line {
+        height: 2px;
+        background-color: #000000;
+        margin-right: 40px;
+        bottom: -11px;
+      }
+      position: absolute;
+      top:170px;
+      right:30px;
+      width: 50%;
+    }
+  }
+  .line-break {
+    background: #979797;
+    height: 1px;
+    width: 1800px;
+    position: absolute;
+    left: -20px;
+  }
+}
+
+
+.course-review {
+  padding-left:120px;
+  padding-right:120px;
+  padding-top: 138px;
+  .line-red {
+    width: 190px;
+    height: 8px;
+    background-color:  #FF1616;
+    color: #FF1616;
+    margin-bottom: 25px;
+  }
+
+  h1.title-review {
+    margin-bottom: 100px;
+  }
+
+  .ad-first {
+    width:100%;
+    .main-description {
+      padding-top: 138px;
+      width: 525px;
+      height: 653px;
+      padding-left: 130px;
+
+      h1.name {
+        margin-bottom: 20px;
+      }
+
+      .description {
+        height: 180px;
+        margin-top: 60px;
+        margin-bottom: 150px;
+        margin-right: 60px;
+      }
+    }
+    .image-advantage{
+      margin-top: 240px;
+      margin-left: 70px;
     }
   }
 }
