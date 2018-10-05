@@ -355,3 +355,32 @@
     }
   }
 }
+
+.students .list-students {
+  margin-bottom: 25px;
+}
+
+.students .student {
+  margin-top: 20px;
+
+  .image {
+    .img-circle {
+      border-radius: 50%;
+    }
+  }
+
+  .student-name {
+    margin:auto;
+    margin-left: -22px;
+  }
+
+}
+
+.students .see-more {
+  margin-top: 20px;
+  width: 95px;
+  height: 34px;
+  color: #4A90E2;
+  text-align: left;
+  border-bottom: 2px solid #4A90E2;
+}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_19_131445) do
+ActiveRecord::Schema.define(version: 2018_10_05_150247) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,25 @@ ActiveRecord::Schema.define(version: 2018_09_19_131445) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "clients", force: :cascade do |t|
+    t.string "email"
+    t.string "name"
+    t.string "phone"
+    t.string "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
+    t.string "creature_file_name"
+    t.string "creature_content_type"
+    t.bigint "creature_file_size"
+    t.datetime "creature_updated_at"
+    t.bigint "course_id"
+    t.index ["course_id"], name: "index_clients_on_course_id"
+  end
+
   create_table "courses", force: :cascade do |t|
     t.string "name_vn"
     t.string "name_en"
@@ -84,6 +103,8 @@ ActiveRecord::Schema.define(version: 2018_09_19_131445) do
     t.string "represent_image_3_content_type"
     t.bigint "represent_image_3_file_size"
     t.datetime "represent_image_3_updated_at"
+    t.text "extra_description_vn"
+    t.text "extra_description_en"
   end
 
   create_table "products", force: :cascade do |t|

@@ -1,7 +1,7 @@
 class Course < ApplicationRecord
+  has_many :clients
   has_attached_file :thumbnail_image, default_url: "https://placeimg.com/300/400/any"
-
-  has_attached_file :represent_image_1
+  has_attached_file :represent_image_1, default_url: "https://placeimg.com/330/375/any"
   has_attached_file :represent_image_2
   has_attached_file :represent_image_3
 
