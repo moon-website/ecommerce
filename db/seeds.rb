@@ -109,6 +109,7 @@ if Course.count == 0
   courses_attributes.each do |course_attributes|
     Course.create(course_attributes)
   end
+  TrainingClass.generate_classes
   Client.generate_clients
   puts "you've create 3 courses"
   puts "you've create 45 students"

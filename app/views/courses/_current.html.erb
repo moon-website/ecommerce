@@ -14,94 +14,41 @@
           MOON không chỉ dừng lại là nơi làm đẹp cho đời mà còn là nơi đào tạo nghề uy tín. Tại đây, với đội ngũ chuyên gia giảng dạy đầu ngành với trình độ cao sẽ giúp bạn chạm tay đến ước mơ trở thành một chuyên viên thẩm mỹ lành nghề. Tự hào là nơi đã rèn luyện và cho ra đời hàng trăm chuyên viên phun xăm thẩm mỹ giỏi, MOON là cơ sở đầu ngành về dạy nghề phun xăm chất lượng và uy tín nhất tại Việt Nam.
         </div>
       </div>
-      <div class="container-course">
-        <div class="main-description">
-          <div class="line-red"> </div>
-          <h1> KHÓA HỌC NỐI MI CƠ BẢN  </h1>
-          <div class="description">
-
-            <p>-	Khóa học nối mi One By One và mi Thiên Thần </p>
-            <p>
-              -	Dụng cụ học tập có thể mua ở MoonEyelash ( với ưu đãi giảm 50%) hoặc học viên tự chuẩn bị
-            </p>
-          </div>
-          <div class="line-black"> </div>
-          <div class="time-course"> Thời gian: Ngày 1 và ngày 15 hàng tháng </div>
-          <div class="price-course">
-            <b>Học phí:</b> <br/>
-            <b>8.000.000 VND</b>
-          </div>
-          <div class="buttons row">
-            <div class="col-8 apply-course mt-4 pl-3 pt-2">
-              <h4 class="apply-course-text">
-                Đăng ký khóa học
-                <div class="apply-course-shaddow"></div>
-              </h4>
+      <% @courses.each do |course|%>
+        <div class="container-course">
+          <div class="main-description">
+            <div class="line-red"> </div>
+            <h1> <%= course.name_vn%>  </h1>
+            <div class="description">
+              <%= course.description_vn.html_safe %>
             </div>
+            <div class="line-black"> </div>
+            <div class="time-course"> Thời gian: <%= course.schedule_vn %> </div>
+            <div class="price-course">
+              <b>Học phí:</b> <br/>
+              <b><%= course.price %></b>
+            </div>
+            <div class="buttons row">
+              <div class="col-8 apply-course mt-4 pl-3 pt-2">
+                <h4 class="apply-course-text">
+                  Đăng ký khóa học
+                  <div class="apply-course-shaddow"></div>
+                </h4>
+              </div>
 
-            <div class="see-more mt-4 pl-3 pt-2">
-                <b>Tìm hiểu thêm</b>
+              <div class="see-more mt-4 pl-3 pt-2">
+                  <b>Tìm hiểu thêm</b>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="extra-description">
-          <p class="item-extra">+ Khoá học nối mi cơ bản</p>
-          <p class="item-extra">+ Khoá học nối mi nâng cao</p>
-          <p class="item-extra">+ Khoá phun thẩm mỹ</p>
-          <p class="item-extra">+ Quyền lợi học viên</p>
-          <p class="item-extra">+ Nhận xét từ học viên</p>
-          <br/><br/><br/><br/>
-          <p class="item-extra">+ Khoá Điêu khắc lông mày</p>
-          <p class="item-extra">+ Khoá lông mày chuyên nghiệp</p>
-          <p class="item-extra">+ Các lợi ích khi đăng ký</p>
-          <p class="item-extra">+ Tác phẩm và nhận xét</p>
-        </div>
-        <img src="https://placeimg.com/330/375/people" class="image-course" alt="image-course">
-      </div>
-      <div class="line-break">
-      </div>
-
-      <div class="container-course">
-        <div class="main-description">
-          <div class="line-red"> </div>
-          <h1> KHÓA HỌC NỐI MI NÂNG CAO </h1>
-          <div class="description">
-
-            <p>-	Khóa học nối mi One By One và mi Thiên Thần </p>
-            <p>
-              -	Dụng cụ học tập có thể mua ở MoonEyelash ( với ưu đãi giảm 50%) hoặc học viên tự chuẩn bị
-            </p>
+          <div class="extra-description">
+            <%= course.extra_description_vn.html_safe %>
           </div>
-          <div class="line-black"> </div>
-          <div class="time-course"> Thời gian: Ngày 1 và ngày 15 hàng tháng </div>
-          <div class="price-course">
-            <b>Học phí:</b> <br/>
-            <b>8.000.000 VND</b>
-          </div>
-          <div class="buttons row">
-            <div class="col-8 apply-course mt-4 pl-3 pt-2">
-              <h4 class="apply-course-text">
-                Đăng ký khóa học
-                <div class="apply-course-shaddow"></div>
-              </h4>
-            </div>
-
-            <div class="see-more mt-4 pl-3 pt-2">
-                <b>Tìm hiểu thêm</b>
-            </div>
-          </div>
+          <img src="https://placeimg.com/330/375/people" class="image-course" alt="image-course">
         </div>
-        <div class="extra-description">
-          <p class="item-extra">+ Khoá Điêu khắc lông mày</p>
-          <p class="item-extra">+ Khoá lông mày chuyên nghiệp</p>
-          <p class="item-extra">+ Các lợi ích khi đăng ký</p>
-          <p class="item-extra">+ Tác phẩm và nhận xét</p>
+        <div class="line-break">
         </div>
-        <img src="https://placeimg.com/330/375/people" class="image-course" alt="image-course">
-      </div>
-      <div class="line-break">
-      </div>
-    </div>
+      <% end %>
     <div class="container-sidebar">hello</div>
   </div>
 </section>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_05_150247) do
+ActiveRecord::Schema.define(version: 2018_10_06_091001) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,8 +71,8 @@ ActiveRecord::Schema.define(version: 2018_10_05_150247) do
     t.string "creature_content_type"
     t.bigint "creature_file_size"
     t.datetime "creature_updated_at"
-    t.bigint "course_id"
-    t.index ["course_id"], name: "index_clients_on_course_id"
+    t.bigint "training_class_id"
+    t.index ["training_class_id"], name: "index_clients_on_training_class_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -169,6 +169,20 @@ ActiveRecord::Schema.define(version: 2018_10_05_150247) do
     t.datetime "image_updated_at"
     t.bigint "service_id"
     t.index ["service_id"], name: "index_sub_services_on_service_id"
+  end
+
+  create_table "training_classes", force: :cascade do |t|
+    t.string "name"
+    t.string "status", default: "t"
+    t.string "start_day"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "course_id"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.bigint "image_file_size"
+    t.datetime "image_updated_at"
+    t.index ["course_id"], name: "index_training_classes_on_course_id"
   end
 
 end
