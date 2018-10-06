@@ -329,6 +329,9 @@
 }
 
 .complete-section {
+  .contain-courses {
+    margin-bottom: 420px;
+  }
   label {
     padding-top:3px;
   }
@@ -376,11 +379,13 @@
 
 }
 
-.students .see-more {
-  margin-top: 20px;
-  width: 95px;
-  height: 34px;
-  color: #4A90E2;
-  text-align: left;
-  border-bottom: 2px solid #4A90E2;
+.students {
+  .see-more {
+    margin-top: 20px;
+    width: 95px;
+    height: 34px;
+    color: #4A90E2;
+    text-align: left;
+    border-bottom: 2px solid #4A90E2;
+  }
 }
