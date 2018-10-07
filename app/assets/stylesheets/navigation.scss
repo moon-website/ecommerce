@@ -1,0 +1,29 @@
+body {
+  font-family: 'Muli', sans-serif;
+}
+
+.nav-black {
+  .navbar {
+    background-color: black;
+    .nav-link {
+      color: white !important;
+      text-decoration: none !important;
+      &:hover {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+}
+
+.nav-white {
+  .navbar {
+    background-color: white;
+    .nav-link {
+      color: black !important;
+      text-decoration: none !important;
+      &:hover {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+}

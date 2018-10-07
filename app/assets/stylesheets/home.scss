@@ -1,23 +1,6 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  font-family: 'Muli', sans-serif;
-}
-
-.nav-home {
-  .navbar {
-    background-color: black;
-    .nav-link {
-      color: white !important;
-      text-decoration: none !important;
-      &:hover {
-        border-bottom: 1px solid red;
-      }
-    }
-  }
-} 
- 
 .home {
   .banner {
     height: 520px;
