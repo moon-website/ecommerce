@@ -1,8 +1,13 @@
 body {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
   font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-.nav-black {
+#nav-black {
   .navbar {
     background-color: black;
     .nav-link {
@@ -15,7 +20,7 @@ body {
   }
 }
 
-.nav-white {
+#nav-white {
   .navbar {
     background-color: white;
     .nav-link {
