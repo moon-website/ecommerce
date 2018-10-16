@@ -1,11 +1,11 @@
 <% service = @services.first %>
+
 <section id="services" class="my-5 pt-5">
   <div class="container">
     <div class="row mt-5">
       <div class="col">
         <div class="service-title-2">
-          <h2 class="text"><%=service.title_vn%></h2>
-          <span class="number"><%=service.priority %></span>
+          <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552371/Group_11.png", width: "420px", class: "service-title-img", alt: "service-title-img") %>
         </div>
       </div>
       <div class="col">
@@ -115,6 +115,7 @@
     </div>
   </div>
 </section>
+
 <div class="pagination-service hidden">
-<%= will_paginate @services %>
+  <%= will_paginate @services %>
 </div>

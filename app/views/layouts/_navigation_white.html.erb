@@ -14,7 +14,18 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item ml-5 pt-1"><a class="nav-link" href="<%= root_path %>">Trang chủ</a></li>
           <li class="nav-item ml-5 pt-1"><a class="nav-link" href="<%= about_path %>">Giới thiệu</a></li>
-          <li class="nav-item ml-5 pt-1"><a class="nav-link" href="<%= services_path + "?page=2"%>">Dịch vụ</a></li>
+          <li class="nav-item ml-5 pt-1">
+            <div class="dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dịch vụ
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="nav-link dropdown-item" href="<%= services_path + "?page=1"%>">Moon Eye Brown</a>
+                <a class="nav-link dropdown-item" href="<%= services_path + "?page=2"%>">Moon Eyelashes</a>
+                <a class="nav-link dropdown-item" href="<%= services_path + "?page=3"%>">Dịch vụ Nails</a>
+              </div>
+            </div>
+          </li>
           <li class="nav-item ml-5 pt-1"><a class="nav-link" href="<%= courses_path %>">Đào tạo</a></li>
           <li class="nav-item ml-5 pt-1"><a class="nav-link" href="#">Shop</a></li>
           <li class="nav-item ml-5 pt-1"><a class="nav-link" href="<%= contact_path %>">Liên hệ</a></li>
