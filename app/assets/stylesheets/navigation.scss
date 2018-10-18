@@ -10,6 +10,7 @@ body {
 #nav-black {
   .navbar {
     background-color: black;
+    .dropdown-menu { background-color: black; border: 1px solid white; }
     .nav-link {
       color: white !important;
       text-decoration: none !important;
@@ -23,6 +24,7 @@ body {
 #nav-white {
   .navbar {
     background-color: white;
+    .dropdown-menu { background-color: white; }
     .nav-link {
       color: black !important;
       text-decoration: none !important;
