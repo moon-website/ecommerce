@@ -1,0 +1,36 @@
+body {
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#nav-black {
+  .navbar {
+    background-color: black;
+    .dropdown-menu { background-color: black; border: 1px solid white; }
+    .nav-link {
+      color: white !important;
+      text-decoration: none !important;
+      &:hover {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+}
+
+#nav-white {
+  .navbar {
+    background-color: white;
+    .dropdown-menu { background-color: white; }
+    .nav-link {
+      color: black !important;
+      text-decoration: none !important;
+      &:hover {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+}

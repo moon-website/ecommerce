@@ -4,3 +4,7 @@
 .pagination-service.hidden {
   display: none;
 }
+
+#services {
+  @import "shared";
+}

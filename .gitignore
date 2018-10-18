@@ -16,7 +16,11 @@
 /node_modules
 /yarn-error.log
 
+# Ignore Byebug command history file.
 .byebug_history
+
 Gemfile.lock
 ./config/database.yml
-./public/system
+
+# Ignore uploaded files in development
+public/system
