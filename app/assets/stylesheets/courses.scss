@@ -2,390 +2,399 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#courses .nav-tabs .current-nav-item {
-  padding-right: 32%;
-}
-
-.current-header {
-  height: 620px;
-  position: relative;
-
-  .banner-portrait {
-    position: absolute;
-    bottom: 0;
-    left: 20rem;
-    z-index: -2;
+#courses {
+  @import "shared";
+  
+  .nav-tabs .current-nav-item {
+    padding-right: 32%;
   }
 
-  .title-teacher {
-    position: absolute;
-    top: 7rem;
-    left: 8rem;
-    z-index: -1;
+  .tab-content {
+    border: none !important; 
   }
 
-  .title-master {
-    position: absolute;
-    top: 10rem;
-    left: 8rem;
-    font-size: 6em;
-    font-weight: bold;
-    z-index: -1;
-  }
-
-  .title-name {
-    position: absolute;
-    top: 17rem;
-    left: 8rem;
-    font-size: 8em;
-    font-weight: bold;
-    z-index: -1;
-  }
-}
-
-.course-retros .container-fluid {
-  .container-course-infos {
-    width: 90%;
-    .item-extra {
-      margin-bottom: 23px;
-    }
-    .description {
-      padding-right: 20px;
-      padding-bottom: 50px;
-      margin-top: 90px;
-    }
-  };
-
-  .container-sidebar {
-    float: right;
-    width: 9%;
-    border-left: 1em;
-    border-color: black;
-    font-size: 24px;
-    line-height: 30px;
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-  }
-
-  .container-course {
-    height: 960px;
-    border-top: 1em;
-    border-bottom: 1em;
-    border-color: #979797;
+  
+  .current-header {
+    height: 620px;
     position: relative;
-
-    .main-description {
-      right: 1rem;
-      padding-top: 138px;
-      width: 525px;
-      height: 653px;
-      // z-index: -1;
+  
+    .banner-portrait {
       position: absolute;
-
-      .line-red {
-        width: 190px;
-        height: 8px;
-        background-color:  #FF1616;
-        color: #FF1616;
-        margin-bottom: 25px;
+      bottom: 0;
+      left: 20rem;
+      z-index: -2;
+    }
+  
+    .title-teacher {
+      position: absolute;
+      top: 7rem;
+      left: 8rem;
+      z-index: -1;
+    }
+  
+    .title-master {
+      position: absolute;
+      top: 10rem;
+      left: 8rem;
+      font-size: 6em;
+      font-weight: bold;
+      z-index: -1;
+    }
+  
+    .title-name {
+      position: absolute;
+      top: 17rem;
+      left: 8rem;
+      font-size: 8em;
+      font-weight: bold;
+      z-index: -1;
+    }
+  }
+  
+  .course-retros .container-fluid {
+    .container-course-infos {
+      width: 90%;
+      .item-extra {
+        margin-bottom: 23px;
       }
-
       .description {
-        height: 180px;
-        margin-top: 70px;
-        margin-bottom: 150px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+        margin-top: 90px;
       }
-
-      .line-black {
-        width: 243px;
-        height: 3px;
-        background-color:  #060606;
-        color: #060606;
-        margin-bottom: 32px;
-      }
-      .price-course {
-        margin-top:30px;
-      }
-
-      .apply-course {
-        width: 275px;
-        height: 52px;
-        border: solid 1px #979797;
-        text-align: left;
-        .apply-course-text {
-          color: #ff1616;
-          position: relative;
-          z-index: 1;
-          left: 10px;
+    };
+  
+    .container-sidebar {
+      float: right;
+      width: 9%;
+      border-left: 1em;
+      border-color: black;
+      font-size: 24px;
+      line-height: 30px;
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+    }
+  
+    .container-course {
+      height: 960px;
+      border-top: 1em;
+      border-bottom: 1em;
+      border-color: #979797;
+      position: relative;
+  
+      .main-description {
+        right: 1rem;
+        padding-top: 138px;
+        width: 525px;
+        height: 653px;
+        // z-index: -1;
+        position: absolute;
+  
+        .line-red {
+          width: 190px;
+          height: 8px;
+          background-color:  #FF1616;
+          color: #FF1616;
+          margin-bottom: 25px;
         }
-        .apply-course-shaddow {
-          width: 176px;
-          height: 16px;
-          background-color: #ffd6d9;
-          position: absolute;
-          z-index: -1;
-          top: 16px;
-          left: -10px;
+  
+        .description {
+          height: 180px;
+          margin-top: 70px;
+          margin-bottom: 150px;
+        }
+  
+        .line-black {
+          width: 243px;
+          height: 3px;
+          background-color:  #060606;
+          color: #060606;
+          margin-bottom: 32px;
+        }
+        .price-course {
+          margin-top:30px;
+        }
+  
+        .apply-course {
+          width: 275px;
+          height: 52px;
+          border: solid 1px #979797;
+          text-align: left;
+          .apply-course-text {
+            color: #ff1616;
+            position: relative;
+            z-index: 1;
+            left: 10px;
+          }
+          .apply-course-shaddow {
+            width: 176px;
+            height: 16px;
+            background-color: #ffd6d9;
+            position: absolute;
+            z-index: -1;
+            top: 16px;
+            left: -10px;
+          }
+        }
+        .see-more {
+          margin-left: 34px;
+          width: 127px;
+          height: 34px;
+          color: #4A90E2;
+          text-align: left;
+          border-bottom: 2px solid #4A90E2;
         }
       }
-      .see-more {
-        margin-left: 34px;
-        width: 127px;
-        height: 34px;
-        color: #4A90E2;
-        text-align: left;
-        border-bottom: 2px solid #4A90E2;
+      .extra-description {
+        position: absolute;
+        top: 250px;
+      }
+      .image-course {
+        position: absolute;
+        left: 330px;
+        top: 163px;
       }
     }
-    .extra-description {
+    .line-break {
+      background: #979797;
+      height: 1px;
+      width: 1800px;
       position: absolute;
-      top: 250px;
-    }
-    .image-course {
-      position: absolute;
-      left: 330px;
-      top: 163px;
+      left: -20px;
     }
   }
-  .line-break {
-    background: #979797;
-    height: 1px;
-    width: 1800px;
-    position: absolute;
-    left: -20px;
-  }
-}
-
-// sesstion advantage
-
-.course-advantage {
-  .ad-first {
-    width:100%;
-    .main-description {
-      padding-top: 138px;
-      width: 525px;
-      height: 653px;
-      padding-left: 130px;
-
-      .line-red {
-        width: 190px;
-        height: 8px;
-        background-color:  #FF1616;
-        color: #FF1616;
-        margin-bottom: 25px;
+  
+  // sesstion advantage
+  
+  .course-advantage {
+    .ad-first {
+      width:100%;
+      .main-description {
+        padding-top: 138px;
+        width: 525px;
+        height: 653px;
+        padding-left: 130px;
+  
+        .line-red {
+          width: 190px;
+          height: 8px;
+          background-color:  #FF1616;
+          color: #FF1616;
+          margin-bottom: 25px;
+        }
+  
+        .description {
+          height: 180px;
+          margin-top: 60px;
+          margin-bottom: 150px;
+          margin-right: 60px;
+        }
       }
-
+      .image-advantage{
+        margin-top: 240px;
+        margin-left: 70px;
+      }
+    }
+  
+    .ad-second {
+      margin-top: 10px;
+      position: relative;
+      height: 500px;
+      .image-advantage {
+        position: absolute;
+        top:75px;
+        left:150px;
+      }
+  
       .description {
-        height: 180px;
-        margin-top: 60px;
-        margin-bottom: 150px;
-        margin-right: 60px;
+        .direction-line {
+          height: 2px;
+          background-color: #000000;
+          margin-right: 40px;
+          bottom: -11px;
+        }
+        position: absolute;
+        top:170px;
+        right:30px;
+        width: 50%;
       }
     }
-    .image-advantage{
-      margin-top: 240px;
-      margin-left: 70px;
-    }
-  }
-
-  .ad-second {
-    margin-top: 10px;
-    position: relative;
-    height: 500px;
-    .image-advantage {
-      position: absolute;
-      top:75px;
-      left:150px;
-    }
-
-    .description {
-      .direction-line {
-        height: 2px;
-        background-color: #000000;
-        margin-right: 40px;
-        bottom: -11px;
+  
+    .ad-third {
+      margin-top: 10px;
+      position: relative;
+      height: 350px;
+      .image-ad-1 {
+        position: absolute;
+        top:87px;
+        right:652px;
       }
-      position: absolute;
-      top:170px;
-      right:30px;
-      width: 50%;
-    }
-  }
-
-  .ad-third {
-    margin-top: 10px;
-    position: relative;
-    height: 350px;
-    .image-ad-1 {
-      position: absolute;
-      top:87px;
-      right:652px;
-    }
-
-    .image-ad-2 {
-      position: absolute;
-      top:5px;
-      right:120px;
-    }
-
-    .description {
-      .direction-line {
-        height: 2px;
-        background-color: #000000;
-        margin-left: 40px;
-        margin-top:10px;
-        width: 157px;
+  
+      .image-ad-2 {
+        position: absolute;
+        top:5px;
+        right:120px;
       }
-      position: absolute;
-      top:120px;
-      left:30px;
-      width: 37%;
-      .description-text {
-        text-align: left;
+  
+      .description {
+        .direction-line {
+          height: 2px;
+          background-color: #000000;
+          margin-left: 40px;
+          margin-top:10px;
+          width: 157px;
+        }
+        position: absolute;
+        top:120px;
+        left:30px;
+        width: 37%;
+        .description-text {
+          text-align: left;
+        }
       }
     }
-  }
-
-  .ad-forth {
-    margin-top: 10px;
-    position: relative;
-    height: 500px;
-    .image-ad-1{
-      position: absolute;
-      top:75px;
-      left:100px;
-    }
-
-    .image-ad-2{
-      position: absolute;
-      top:75px;
-      left:380px;
-    }
-
-    .description {
-      .direction-line {
-        height: 2px;
-        background-color: #000000;
-        margin-right: 40px;
-        bottom: -11px;
+  
+    .ad-forth {
+      margin-top: 10px;
+      position: relative;
+      height: 500px;
+      .image-ad-1{
+        position: absolute;
+        top:75px;
+        left:100px;
       }
+  
+      .image-ad-2{
+        position: absolute;
+        top:75px;
+        left:380px;
+      }
+  
+      .description {
+        .direction-line {
+          height: 2px;
+          background-color: #000000;
+          margin-right: 40px;
+          bottom: -11px;
+        }
+        position: absolute;
+        top:170px;
+        right:30px;
+        width: 50%;
+      }
+    }
+    .line-break {
+      background: #979797;
+      height: 1px;
+      width: 1800px;
       position: absolute;
-      top:170px;
-      right:30px;
-      width: 50%;
+      left: -20px;
     }
   }
-  .line-break {
-    background: #979797;
-    height: 1px;
-    width: 1800px;
-    position: absolute;
-    left: -20px;
+  
+  
+  .course-review {
+    padding-left:120px;
+    padding-right:120px;
+    padding-top: 138px;
+    .line-red {
+      width: 190px;
+      height: 8px;
+      background-color:  #FF1616;
+      color: #FF1616;
+      margin-bottom: 25px;
+    }
+  
+    h1.title-review {
+      margin-bottom: 100px;
+    }
+  
+    .ad-first {
+      width:100%;
+      .main-description {
+        padding-top: 138px;
+        width: 525px;
+        height: 653px;
+        padding-left: 130px;
+  
+        h1.name {
+          margin-bottom: 20px;
+        }
+  
+        .description {
+          height: 180px;
+          margin-top: 60px;
+          margin-bottom: 150px;
+          margin-right: 60px;
+        }
+      }
+      .image-advantage {
+        margin-top: 240px;
+        margin-left: 70px;
+      }
+    }
   }
-}
-
-
-.course-review {
-  padding-left:120px;
-  padding-right:120px;
-  padding-top: 138px;
-  .line-red {
-    width: 190px;
-    height: 8px;
-    background-color:  #FF1616;
-    color: #FF1616;
+  
+  .complete-section {
+    .contain-courses {
+      margin-bottom: 420px;
+    }
+    label {
+      padding-top:3px;
+    }
+    .filter-complete {
+      width: 260px;
+      float: right;
+      margin-right:200px;
+    }
+  
+    .course {
+      width: 100%;
+      padding-top:70px;
+      .main-info {
+      padding-left:170px;
+        .image-course {
+          margin-top:30px;
+        }
+      }
+  
+      .students {
+        float:right;
+        padding-top:100px;
+        padding-right:170px;
+      }
+    }
+  }
+  
+  .students .list-students {
     margin-bottom: 25px;
   }
-
-  h1.title-review {
-    margin-bottom: 100px;
-  }
-
-  .ad-first {
-    width:100%;
-    .main-description {
-      padding-top: 138px;
-      width: 525px;
-      height: 653px;
-      padding-left: 130px;
-
-      h1.name {
-        margin-bottom: 20px;
-      }
-
-      .description {
-        height: 180px;
-        margin-top: 60px;
-        margin-bottom: 150px;
-        margin-right: 60px;
-      }
-    }
-    .image-advantage {
-      margin-top: 240px;
-      margin-left: 70px;
-    }
-  }
-}
-
-.complete-section {
-  .contain-courses {
-    margin-bottom: 420px;
-  }
-  label {
-    padding-top:3px;
-  }
-  .filter-complete {
-    width: 260px;
-    float: right;
-    margin-right:200px;
-  }
-
-  .course {
-    width: 100%;
-    padding-top:70px;
-    .main-info {
-    padding-left:170px;
-      .image-course {
-        margin-top:30px;
-      }
-    }
-
-    .students {
-      float:right;
-      padding-top:100px;
-      padding-right:170px;
-    }
-  }
-}
-
-.students .list-students {
-  margin-bottom: 25px;
-}
-
-.students .student {
-  margin-top: 20px;
-
-  .image {
-    .img-circle {
-      border-radius: 50%;
-    }
-  }
-
-  .student-name {
-    margin:auto;
-    margin-left: -22px;
-  }
-
-}
-
-.students {
-  .see-more {
+  
+  .students .student {
     margin-top: 20px;
-    width: 95px;
-    height: 34px;
-    color: #4A90E2;
-    text-align: left;
-    border-bottom: 2px solid #4A90E2;
+  
+    .image {
+      .img-circle {
+        border-radius: 50%;
+      }
+    }
+  
+    .student-name {
+      margin:auto;
+      margin-left: -22px;
+    }
+  
   }
+  
+  .students {
+    .see-more {
+      margin-top: 20px;
+      width: 95px;
+      height: 34px;
+      color: #4A90E2;
+      text-align: left;
+      border-bottom: 2px solid #4A90E2;
+    }
+  }  
 }

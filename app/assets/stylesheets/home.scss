@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #home {
+  @import "shared";
   // banner section
   #banner {
     height: 520px;
@@ -64,6 +65,4 @@
   #popular-products {
     hr { border-top: 1px solid #565656 !important; }
   }
-  
-  @import "shared";
 }
