@@ -1,0 +1,179 @@
+<main id="home">
+
+  <!-- Banner section -->
+  <header id="banner">
+    <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538840041/banner.png", class: "banner-portrait", alt: "banner-portrait") %>
+    <h2 class="banner-text text-center">Master Nghi Nguyễn</h2>
+    <div class="banner-text-wrap">
+      <div class="running-text">MOON EYES BROWN EYE SPLASH NAIL</div>
+      <div class="running-text">MOON EYES BROWN EYE SPLASH NAIL</div>
+      <div class="running-text">MOON EYES BROWN EYE SPLASH NAIL</div>
+    </div>
+  </header>
+
+  <div id="scroll-down" class="border-bottom">
+    <div class="scroll-wrapper text-center mt-3">
+      <h5>Scroll down</h5>
+      <div class="sep-line mx-auto"></div>
+    </div>
+  </div>
+
+  <!-- Courses section -->
+  <section id="courses" class="my-5 py-5">
+    <div class="container">
+      <h1 class="text-center">KHOÁ ĐÀO TẠO THÁNG 7</h1>
+      <div class="hr-line-big mx-auto my-5"></div>
+      <div class="row">
+        <% @courses.each do |course| %>
+          <div class="col text-left">
+            <%= image_tag(course.thumbnail_image.url, size: "300x330")%>
+            <h5 class="pt-4"><%=course.name_vn %></h5>
+            <p><%= course.schedule_vn %></p>
+            <h5>
+              Học phí:<br/>
+              <%= course.price %>
+            </h5>
+            <div class="find-more-wrapper mt-4 pl-3 pt-2">
+              <h4 class="find-more">
+                Tìm hiểu thêm
+                <div class="hr-line-pink"></div>
+              </h4>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="vertical-text d-flex align-items-center">
+      <span style="height: 2px; width: 130px; margin-right: 40px; background-color: black; display: inline-block"></span>
+      <h5 style="display: inline-block" class="mb-0">Moon Eyebrows Eye Splash Nails</h5>
+    </div>
+  </section>
+
+  <!-- Services section -->
+  <section id="services" class="my-5 py-5">
+    <div class="container">
+      <h1 class="text-center">DỊCH VỤ TẠI MOON</h1>
+      <div class="hr-line-big mx-auto my-5"></div>
+
+      <div class="service-1 py-5">
+        <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552388/Asset_2_2x.png", class: "float-img-right", alt: "float-img-right") %>
+        <div class="row">
+          <div class="col service-title-1">
+            <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552371/Group_10.png", width: "420px", class: "service-title-img", alt: "service-title-img") %>
+            <!-- <h2 class="text"><%= @service_eyebrown.title_vn %></h2> -->
+            <!-- <span class="number"><%= @service_eyebrown.priority %></span> -->
+          </div>
+          <div class="col">
+            <ul class="text-left">
+              <%= @service_eyebrown.description_vn.html_safe %>
+            </ul>
+            <a href="" class="pricing">Xem bản giá</a>
+            <div class="find-more-wrapper mt-5 pl-3 pt-2">
+              <h4 class="find-more">
+                Tìm hiểu thêm
+                <div class="hr-line-pink"></div>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="row img-row pt-5 my-5">
+          <div class="col">
+            <%= image_tag(@service_eyebrown.represent_image_1.url, size: "350x350", alt: "img-1")%>
+          </div>
+          <div class="col">
+            <%= image_tag(@service_eyebrown.represent_image_2.url, size: "450x450", alt: "img-2")%>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-2 py-5">
+        <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552387/Asset_2_2x_Copy.png", class: "float-img-left", alt: "float-img-left") %>
+        <div class="row">
+          <div class="col">
+            <div class="service-title-2">
+              <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552371/Group_11.png", width: "420px", class: "service-title-img", alt: "service-title-img") %>
+            </div>
+          </div>
+          <div class="col">
+            <ul class="text-left">
+              <%= @service_eyelashes.description_vn.html_safe %>
+            </ul>
+            <a href="" class="pricing">Xem bản giá</a>
+            <div class="find-more-wrapper mt-5 pl-3 pt-2">
+              <h4 class="find-more">
+                Tìm hiểu thêm
+                <div class="hr-line-pink"></div>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="row img-row pt-5 my-5">
+          <div class="col-4 d-flex flex-column justify-content-center">
+            <%= image_tag(@service_eyelashes.represent_image_1.url, width: "100%", alt: "img-1")%>
+          </div>
+          <div class="col-4 d-flex flex-row">
+            <%= image_tag(@service_eyelashes.represent_image_2.url, width: "100%", height: "100%", alt: "img-2")%>
+          </div>
+          <div class="col-4 d-flex flex-row">
+            <%= image_tag(@service_eyelashes.represent_image_3.url, width: "250px", height: "250px", alt: "img-3")%>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-3 py-5">
+        <div class="row">
+          <div class="col">
+            <div class="service-title-3">
+              <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552374/Group_13.png", width: "420px", class: "service-title-img", alt: "service-title-img") %>
+            </div>
+          </div>
+          <div class="col">
+            <p class="text-left">
+              <%= @service_nails.description_vn.html_safe %>
+            </p>
+            <a href="" class="pricing">Xem bản giá</a>
+            <div class="find-more-wrapper mt-5 pl-3 pt-2">
+              <h4 class="find-more">
+                Tìm hiểu thêm
+                <div class="hr-line-pink"></div>
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="row img-row pt-5 my-5">
+          <div class="col">
+            <%= image_tag(@service_nails.represent_image_1.url, size: "800x560", alt: "img-1")%>
+          </div>
+          <div class="col">
+            <%= image_tag(@service_nails.represent_image_2.url, size: "250x250", alt: "img-2")%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Products section -->
+  <section id="popular-products" class="my-5 py-5">
+    <div class="container">
+      <h1 class="text-center">CÁC SẢN PHẨM BÁN CHẠY TẠI MOON</h1>
+      <div class="hr-line-big mx-auto my-5"></div>
+      <% @categories.each do |cat| %>
+        <div class="categories mb-5 pb-5">
+          <h3><%= cat.name_vn%></h3>
+          <hr>
+          <div class="row">
+            <% cat.products.limit(3).each do |product|%>
+              <div class="col text-center">
+                <%= image_tag(product.image.url, size: "300x400", alt: "product image")%>
+                <h5><%= product.name_vn %></h5>
+                <p><b><%= product.price %></b></p>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+</main>
+

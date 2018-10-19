@@ -13,8 +13,12 @@ gem 'devise', '~> 4.4.3'
 gem 'draper', '~> 3.0.1'
 gem 'pundit', '~> 1.1.0'
 
+gem 'jquery-rails'
+gem 'bootstrap', '~> 4.1.3'
+gem 'will_paginate', '~> 3.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.5'
+gem 'rails', '~> 5.2.1'
+gem 'paperclip'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -32,6 +36,9 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+gem 'faker'
+gem "http"
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
@@ -46,9 +53,19 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Add rspec for CircleCI
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do
+  gem 'brakeman', '4.3.1', require: false
+  gem 'bullet', '5.7.5', group: 'development'
+  gem 'rails-erd', '1.5.2', require: false
+  gem 'rails_best_practices', '1.19.2', group: 'development'
+  gem 'rubocop', '0.55.0', require: false, group: 'development'
+  gem 'traceroute', '0.6.1'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
