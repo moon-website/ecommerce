@@ -1,4 +1,4 @@
-body {
+html, body {
   margin: 0; 
   padding: 0; 
   box-sizing: border-box;
@@ -10,12 +10,14 @@ body {
 #nav-black {
   .navbar {
     background-color: black;
+    padding: 0;
     .dropdown-menu { background-color: black; border: 1px solid white; }
     .nav-link {
+      border-bottom: 2px solid transparent;
       color: white !important;
       text-decoration: none !important;
       &:hover {
-        border-bottom: 1px solid red;
+        border-bottom: 2px solid red;
       }
     }
   }
@@ -24,12 +26,14 @@ body {
 #nav-white {
   .navbar {
     background-color: white;
+    padding: 0;
     .dropdown-menu { background-color: white; }
     .nav-link {
+      border-bottom: 2px solid transparent;
       color: black !important;
       text-decoration: none !important;
       &:hover {
-        border-bottom: 1px solid red;
+        border-bottom: 2px solid red;
       }
     }
   }
