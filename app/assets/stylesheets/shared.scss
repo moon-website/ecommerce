@@ -1,13 +1,14 @@
 // common styles
-.hr-line-big { width: 196px; height: 8px; background-color: #ff1616; }
-.find-more-wrapper {
+.red-hr-line { width: 196px; height: 8px; background-color: #ff1616; }
+.red-text-wrapper {
   width: 275px;
   height: 52px;
   border: solid 1px #979797;
   text-align: left;
-  .find-more { color: #ff1616; position: relative; z-index: 1; left: 10px; }
-  .hr-line-pink {
+  .red-text { color: #ff1616; position: relative; z-index: 1; left: 10px; }
+  .pink-hr-line {
     position: absolute; z-index: -1; top: 16px; left: -10px;
     width: 176px; height: 16px; background-color: #ffd6d9;
   }
 }
+.black-hr-line { width: 243px; height: 3px; background-color: #060606; }

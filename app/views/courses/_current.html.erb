@@ -1,129 +1,102 @@
 <section id="current-courses">
-  <div class="container-course-infos">
-    <header id="banner">
-      <div class="content-wrapper">
-        <h2>Giảng viên</h2>
-        <h1>
-          Master
-          <br/>
-          Nghi Nguyễn
-        </h1>
-        <img src="https://res.cloudinary.com/buihdk/image/upload/v1538840041/banner.png" class="banner-portrait" alt="banner-portrait">
-      </div>
-      <div class="details">
-        MOON không chỉ dừng lại là nơi làm đẹp cho đời mà còn là nơi đào tạo nghề uy tín. Tại đây, với đội ngũ chuyên gia giảng dạy đầu ngành với trình độ cao sẽ giúp bạn chạm tay đến ước mơ trở thành một chuyên viên thẩm mỹ lành nghề. Tự hào là nơi đã rèn luyện và cho ra đời hàng trăm chuyên viên phun xăm thẩm mỹ giỏi, MOON là cơ sở đầu ngành về dạy nghề phun xăm chất lượng và uy tín nhất tại Việt Nam.
-      </div>
-    </header>
+  <header id="banner">
+    <div class="banner-wrapper">
+      <h2>Giảng viên</h2>
+      <h1>Master<br/>Nghi Nguyễn</h1>
+      <img src="https://res.cloudinary.com/buihdk/image/upload/v1538840041/banner.png" class="banner-portrait" alt="banner-portrait">
+    </div>
+    <div class="banner-info">
+      MOON không chỉ dừng lại là nơi làm đẹp cho đời mà còn là nơi đào tạo nghề uy tín. Tại đây, với đội ngũ chuyên gia giảng dạy đầu ngành với trình độ cao sẽ giúp bạn chạm tay đến ước mơ trở thành một chuyên viên thẩm mỹ lành nghề. Tự hào là nơi đã rèn luyện và cho ra đời hàng trăm chuyên viên phun xăm thẩm mỹ giỏi, MOON là cơ sở đầu ngành về dạy nghề phun xăm chất lượng và uy tín nhất tại Việt Nam.
+    </div>
+  </header>
     
-    <div class="row">
-      <div class="col-3">
+  <article id="course-info">
+    <% @courses.each do |course| %>
+    <div class="row my-5">
+      <div class="col">
+        <img src="https://placeimg.com/340/375/people"/>
       </div>
-      
+      <div class="col">
+        <div class="red-hr-line my-4"></div>
+        <h3><%= course.name_vn%></h3>
+        <ul>
+          <%= course.description_vn.html_safe %>
+          <!-- <%= course.extra_description_vn.html_safe %> -->
+        </ul>
+        <div class="black-hr-line my-4"></div>
+        <div class="time"> Thời gian: <%= course.schedule_vn %> </div>
+        <div class="price">
+          <b>Học phí:</b> <br/>
+          <b><%= course.price %></b>
+        </div>
+        <div class="sign-up">
+          <div class="red-text-wrapper mt-5 pl-3 pt-2">
+            <h4 class="red-text">
+              Đăng ký khóa học
+              <div class="pink-hr-line"></div>
+            </h4>
+          </div>
+          <a href="" class="find-more">Tìm hiểu thêm</a>
+        </div>
+      </div>
     </div>
-    <% @courses.each do |course|%>
-      <div class="container-course">
-        <div class="main-description">
-          <div class="line-red"> </div>
-          <h1> <%= course.name_vn%>  </h1>
-          <div class="description">
-            <%= course.description_vn.html_safe %>
-          </div>
-          <div class="line-black"> </div>
-          <div class="time-course"> Thời gian: <%= course.schedule_vn %> </div>
-          <div class="price-course">
-            <b>Học phí:</b> <br/>
-            <b><%= course.price %></b>
-          </div>
-          <div class="buttons row">
-            <div class="col-8 apply-course mt-4 pl-3 pt-2">
-              <h4 class="apply-course-text">
-                Đăng ký khóa học
-                <div class="apply-course-shaddow"></div>
-              </h4>
-            </div>
-
-            <div class="see-more mt-4 pl-3 pt-2">
-                <b>Tìm hiểu thêm</b>
-            </div>
-          </div>
-        </div>
-        <div class="extra-description">
-          <%= course.extra_description_vn.html_safe %>
-        </div>
-        <img src="https://placeimg.com/330/375/people" class="image-course" alt="image-course">
-      </div>
-      <div class="line-break">
-      </div>
     <% end %>
-  <div class="container-sidebar">hello</div>
-</section>
+  </article>
 
-<section class="course-advantage">
-  <div class="row ad-first">
-    <div class="col-6 main-description">
-      <div class="line-red"> </div>
-      <h1> CÁC LỢI ÍCH VÔ HẠN KHI ĐĂNG KÍ HỌC NỐI MI </h1>
-      <div class="description">
-        <p>
-        -	Khi đăng kí khóa học nâng cao chuyên nghiệp, MoonEyelash sẽ bồi dưỡng thêm cho các
-        bạn những khóa học bổ ích như massage đầu,body massage cho khách sau khi sử dụng dịch vụ,
-        chụp ảnh tác phẩm mi và ghép ảnh sao cho thu hút, bắt mắt người nhìn, khóa học thắt tóc nghệ thuật,  …
-        </p>
-        <p>
-          -	Mỗi khóa học đều mang lại lợi ích cho công việc sau này, kiến thức sẽ được cập nhật thường xuyên
-          và học viên có thể quay lại học tập bất cứ khi nào bạn muốn
-        </p>
+  <article id="course-benefit my-5">
+    <div class="row">
+      <div class="col">
+        <div class="red-hr-line my-4"></div>
+        <h1>CÁC LỢI ÍCH VÔ HẠN KHI ĐĂNG KÍ HỌC NỐI MI</h1>
+        <div class="benefit-info">
+          <p>-	Khi đăng kí khóa học nâng cao chuyên nghiệp, MoonEyelash sẽ bồi dưỡng thêm cho các
+          bạn những khóa học bổ ích như massage đầu,body massage cho khách sau khi sử dụng dịch vụ,
+          chụp ảnh tác phẩm mi và ghép ảnh sao cho thu hút, bắt mắt người nhìn, khóa học thắt tóc nghệ thuật,  …</p>
+          <p>-	Mỗi khóa học đều mang lại lợi ích cho công việc sau này, kiến thức sẽ được cập nhật thường xuyên
+          và học viên có thể quay lại học tập bất cứ khi nào bạn muốn</p>
+        </div>
+      </div>
+      <div class="col">
+        <img src="https://placeimg.com/589/516/people"/>
       </div>
     </div>
-    <div class="col-6">
-      <img src="https://placeimg.com/589/516/people" class="image-advantage" alt="image-advantage">
-    </div>
-  </div>
-  <div class="ad-second">
-    <img src="https://placeimg.com/485/368/people" class="image-advantage" alt="image-advantage">
-    <div class="description row">
-      <div class="col-3 direction-line"> </div>
-      <div class="description-text">
+    <div class="row">
+      <div class="col">
+        <img src="https://placeimg.com/485/368/people"/>
+      </div>
+      <div class="col">
         Khóa học massage đầu, massage body
       </div>
     </div>
-  </div>
-
- <div class="ad-third">
-    <img src="https://placeimg.com/206/206/people" class="image-ad-1" alt="image-ad-1">
-    <img src="https://placeimg.com/504/379/people" class="image-ad-2" alt="image-ad-2">
-    <div class="description row">
-      <div class="col-7 description-text">
+    <div class="row">
+      <div class="col-4">
         Khóa học mix mi màu lạ mắt và cá tính, thêm một xu hướng được giới trẻ rất yêu thích hiện nay.
       </div>
-      <div class="direction-line"> </div>
+      <div class="col-8">
+        <img src="https://placeimg.com/206/206/people"/>
+        <img src="https://placeimg.com/444/379/people"/>
+      </div>
     </div>
-  </div>
-
-  <div class="ad-forth">
-    <img src="https://placeimg.com/250/368/people" class="image-ad-1" alt="image-ad-1">
-    <img src="https://placeimg.com/250/368/people" class="image-ad-2" alt="image-ad-2">
-    <div class="description row">
-      <div class="col-3 direction-line"> </div>
-      <div class="description-text">
+    <div class="row">
+      <div class="col">
+        <img src="https://placeimg.com/250/368/people"/>
+        <img src="https://placeimg.com/250/368/people"/>
+      </div>
+      <div class="col">
         Khóa cọc thắt tóc nghệ thuật cực cá tính
       </div>
     </div>
-  </div>
-  <div class="line-break">
-  </div>
-</section>
-<section class="course-review">
-  <div class="line-red"> </div>
-  <h1 class="title-review"> TÁC PHẨM VÀ NHẬN XÉT TỪ HỌC VIÊN </h1>
-  <div class="row">
-    <div class="col-6">
-      <img src="https://placeimg.com/425/425/people" class="image-advantage" alt="image-advantage">
-    </div>
+  </article>
 
-    <div class="col-6 main-description">
-      <h1 class="name"> Jynn Lolie </h1>
-      <div class="description">
+  <article id="testimonial">
+    <div class="red-hr-line my-4"></div>
+    <h1>TÁC PHẨM VÀ NHẬN XÉT TỪ HỌC VIÊN</h1>
+    <div class="row">
+      <div class="col">
+        <img src="https://placeimg.com/425/425/people"/>
+      </div>
+      <div class="col">
+        <h2>Jynn Lolie</h1>
         <p>
           Tôi kinh doanh mặt hàng nguyên phụ liệu giày dép, tôi có 2 đứa em họ mà tôi rất muốn giúp đỡ để cho nó
           có nghề, theo tôi phụ bán hàng cũng vất vã vì phải khuân vác làm các việc nặng nhọc kiểm kho, nhưng cũng
@@ -150,6 +123,6 @@
         </p>
       </div>
     </div>
-
-  </div>
+  </article>
+  
 </section>

@@ -22,7 +22,7 @@
   <section id="courses" class="my-5 py-5">
     <div class="container">
       <h1 class="text-center">KHOÁ ĐÀO TẠO THÁNG 7</h1>
-      <div class="hr-line-big mx-auto my-5"></div>
+      <div class="red-hr-line mx-auto my-5"></div>
       <div class="row">
         <% @courses.each do |course| %>
           <div class="col text-left">
@@ -33,10 +33,10 @@
               Học phí:<br/>
               <%= course.price %>
             </h5>
-            <div class="find-more-wrapper mt-4 pl-3 pt-2">
-              <h4 class="find-more">
+            <div class="red-text-wrapper mt-4 pl-3 pt-2">
+              <h4 class="red-text">
                 Tìm hiểu thêm
-                <div class="hr-line-pink"></div>
+                <div class="pink-hr-line"></div>
               </h4>
             </div>
           </div>
@@ -53,7 +53,7 @@
   <section id="services" class="my-5 py-5">
     <div class="container">
       <h1 class="text-center">DỊCH VỤ TẠI MOON</h1>
-      <div class="hr-line-big mx-auto my-5"></div>
+      <div class="red-hr-line mx-auto my-5"></div>
 
       <div class="service-1 py-5">
         <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552388/Asset_2_2x.png", class: "float-img-right", alt: "float-img-right") %>
@@ -68,10 +68,10 @@
               <%= @service_eyebrown.description_vn.html_safe %>
             </ul>
             <a href="" class="pricing">Xem bản giá</a>
-            <div class="find-more-wrapper mt-5 pl-3 pt-2">
-              <h4 class="find-more">
+            <div class="red-text-wrapper mt-5 pl-3 pt-2">
+              <h4 class="red-text">
                 Tìm hiểu thêm
-                <div class="hr-line-pink"></div>
+                <div class="pink-hr-line"></div>
               </h4>
             </div>
           </div>
@@ -99,10 +99,10 @@
               <%= @service_eyelashes.description_vn.html_safe %>
             </ul>
             <a href="" class="pricing">Xem bản giá</a>
-            <div class="find-more-wrapper mt-5 pl-3 pt-2">
-              <h4 class="find-more">
+            <div class="red-text-wrapper mt-5 pl-3 pt-2">
+              <h4 class="red-text">
                 Tìm hiểu thêm
-                <div class="hr-line-pink"></div>
+                <div class="pink-hr-line"></div>
               </h4>
             </div>
           </div>
@@ -132,10 +132,10 @@
               <%= @service_nails.description_vn.html_safe %>
             </p>
             <a href="" class="pricing">Xem bản giá</a>
-            <div class="find-more-wrapper mt-5 pl-3 pt-2">
-              <h4 class="find-more">
+            <div class="red-text-wrapper mt-5 pl-3 pt-2">
+              <h4 class="red-text">
                 Tìm hiểu thêm
-                <div class="hr-line-pink"></div>
+                <div class="pink-hr-line"></div>
               </h4>
             </div>
           </div>
@@ -156,7 +156,7 @@
   <section id="popular-products" class="my-5 py-5">
     <div class="container">
       <h1 class="text-center">CÁC SẢN PHẨM BÁN CHẠY TẠI MOON</h1>
-      <div class="hr-line-big mx-auto my-5"></div>
+      <div class="red-hr-line mx-auto my-5"></div>
       <% @categories.each do |cat| %>
         <div class="categories mb-5 pb-5">
           <h3><%= cat.name_vn%></h3>
