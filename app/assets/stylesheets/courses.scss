@@ -36,26 +36,16 @@
           z-index: -1;
         }
       }
-      .banner-info {
-        margin-left: 12rem;
-      }
+      .banner-info { margin-left: 12rem; }
     }
     #course-info {
-      .sign-up {
-        display: flex;
-        align-items: flex-end;
-      }
-      .find-more {
-        color: #4A90E2;
-        border-bottom: 2px solid #4A90E2;
-        text-decoration: none;
-        padding: 10px 0;
-        margin: 0 30px;
-      }
+      .sign-up { display: flex; align-items: flex-end; }
     }
   }
 
   #completed-courses {
-
+    .student-img {
+      border-radius: 50%;
+    }
   }
 }

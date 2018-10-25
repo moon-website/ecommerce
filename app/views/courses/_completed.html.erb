@@ -15,30 +15,26 @@
       </div>
     </div>
   </div>
-  <div class="contain-courses">
-    <% @training_classes.each do |tc|%>
-      <div class="row course">
-        <div class="col-6 main-info">
-          <h1 class="title-course"><%=tc.name%></h1>
-          <%= image_tag(tc.image.url, size: "500x500", class: "image-course", alt: "image-course")%>
-        </div>
-        <div class="col-6 students">
-          <h5 class="list-students">Danh sách học viên</h5>
-          <% tc.clients.limit(5).each do |st| %>
-            <div class="row student">
-              <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 image">
-                <%= image_tag(st.image.url, size: "48x48", class: "student-image", alt: "student-image")%>
-              </div>
-              <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 student-name">
-                <%= st.name%>
-              </div>
-            </div>
-          <% end %>
-          <div class="see-more mt-4 pl-3 pt-2">
-            <b>Xem thêm</b>
-          </div>
-        </div>
+
+  <% @training_classes.each do |tc|%>
+  <article class="course-by-month my-3">
+    <h2><%=tc.name%></h2>
+    <div class="row">
+      <div class="col-6">
+        <%= image_tag(tc.image.url, size: "500x500", class: "image-course", alt: "image-course")%>
       </div>
-    <% end %>
-  </div>
+      <div class="col-6">
+        <h4>Danh sách học viên</h4>
+        <% tc.clients.limit(5).each do |st| %>
+          <div class="student-wrapper my-3">
+            <%= image_tag(st.image.url, size: "48x48", class: "student-img", alt: "student-img") %>
+            <%= st.name %>
+          </div>
+        <% end %>
+        <a href="" class="blue-text ml-0">Xem thêm</a>
+      </div>
+    </div>
+  </article>
+  <% end %>
+
 </section>
