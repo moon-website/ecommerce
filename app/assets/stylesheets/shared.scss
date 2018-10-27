@@ -1,0 +1,18 @@
+// common styles
+.red-hr-line { width: 196px; height: 8px; background-color: #ff1616; }
+.red-text-wrapper {
+  width: 275px;
+  height: 52px;
+  border: solid 1px #979797;
+  text-align: left;
+  .red-text { color: #ff1616; position: relative; z-index: 1; left: 10px; }
+  .pink-hr-line {
+    position: absolute; z-index: -1; top: 16px; left: -10px;
+    width: 176px; height: 16px; background-color: #ffd6d9;
+  }
+}
+.blue-text { 
+  color: #4A90E2; padding: 10px 0; margin: 0 30px;
+  border-bottom: 2px solid #4A90E2; text-decoration: none; 
+}
+.black-hr-line { width: 243px; height: 3px; background-color: #060606; }

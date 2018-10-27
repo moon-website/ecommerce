@@ -1,215 +1,68 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-  font-family: 'Muli', sans-serif;
-}
-
-.homepage .nav-link {
-  color: white !important;
-  text-decoration: none !important;
-  &:hover {
-    border-bottom: 1px solid red;
-  }
-}
-
-.header-homepage {
-  height: 650px;
-  background-color: #080702;
-  position: relative;
-
-  .banner-portrait {
-    position: absolute;
-    bottom: 0;
-    left: 12rem;
-  }
-}
-
-hr {
-  border-top: 2px solid rgba(0, 0, 0, 0.1) !important;
-}
-/* .navbar {
-  background-color: white;
-} */
-
-.banner-text {
-  color: white;
-  padding-top: 19rem;
-}
-
-.banner-text-wrap {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  z-index: 5;
-  font-size: 0;
-  color: #fff;
-  overflow: hidden;
-  padding-bottom: 8.5vh;
-  white-space: nowrap;
-  -webkit-font-smoothing: antialiased;
-  .running-text {
-    white-space: nowrap;
-    display: inline-block;
-    font-size: 152px;
-    line-height: 1.31579;
-    letter-spacing: -.02em;
-    width: auto;
-    -webkit-animation: textRotate 24s infinite linear 5s;
-    -moz-animation: textRotate 24s infinite linear 5s;
-    animation: textRotate 24s infinite linear 5s;
-    padding-right: .15em;
-    padding-left: .5em;
-  }
-}
-
-#scroll-down {
-  height: 70px;
-  background-color: #ffffff;
-}
-
-.sep-line {
-  width: 1px;
-  height: 15px;
-  background-color: #333333;
-}
-
-.hr-line-big {
-  width: 196px;
-  height: 8px;
-  background-color: #ff1616;
-}
-
-.find-more-wrapper {
-  width: 275px;
-  height: 52px;
-  border: solid 1px #979797;
-  text-align: left;
-  .find-more {
-    color: #ff1616;
+#home {
+  @import "shared";
+  // banner section
+  #banner {
+    height: 520px;
+    background-color: #080702;
     position: relative;
-    z-index: 1;
-    left: 10px;
+    .banner-portrait { position: absolute; bottom: 0; left: 7rem; }
+    .banner-text { color: white; padding-top: 15rem; }
+    .banner-text-wrap {
+      position: absolute; left: 0; bottom: 0; width: 100%; z-index: 5;
+      font-size: 0; color: #fff; overflow: hidden; padding-bottom: 8.5vh; 
+      white-space: nowrap; -webkit-font-smoothing: antialiased;
+      .running-text {
+        white-space: nowrap; display: inline-block;
+        font-size: 152px; line-height: 1.31579;
+        letter-spacing: -.02em; width: auto;
+        -webkit-animation: textRotate 24s infinite linear 5s;
+        -moz-animation: textRotate 24s infinite linear 5s;
+        animation: textRotate 24s infinite linear 5s;
+        padding-right: .15em; padding-left: .5em;
+      }
+    }
+    @keyframes textRotate {
+      0% { -webkit-transform: translateX(0); -moz-transform: translateX(0); -ms-transform: translateX(0); -o-transform: translateX(0); transform: translateX(0); }
+      100% { -webkit-transform: translateX(-100%); -moz-transform: translateX(-100%); -ms-transform: translateX(-100%); -o-transform: translateX(-100%); transform: translateX(-100%); }
+    }
   }
-  .hr-line-pink {
-    width: 176px;
-    height: 16px;
-    background-color: #ffd6d9;
-    position: absolute;
-    z-index: -1;
-    top: 16px;
-    left: -10px;
-  }
-}
 
-#services {
-  ul {
-    list-style: none;
-    padding-left: 0;
+  // scroll-down section
+  #scroll-down { 
+    height: 70px; background-color: #ffffff; 
+    .sep-line { width: 1px; height: 15px; background-color: #333333; }
   }
-  li::before {
-    content: "\2014";
-    position: absolute;
-    left: -24px;
-  }
-  .pricing {
-    display: block;
-    text-align: left;
-  }
-  .service-title-1 {
+
+  // courses section
+  #courses {
     position: relative;
-    .number {
-      font-size: 250px;
-      color: #f3f3f3;
+    .vertical-text {
+      transform: rotate(90deg);
+      transform-origin: left top 0;
       position: absolute;
-      top: -90px;
-      left: 100px;
-      z-index: -1;
-    }
-    .text {
-      font-size: 36px;
-      font-weight: 800;
-      position: absolute;
-      top: 40px;
-      left: 220px;
+      bottom: 400px;
+      right: -450px;
     }
   }
-  .service-title-2 {
+
+  // services section
+  #services {
     position: relative;
-    .number {
-      font-size: 250px;
-      color: #f3f3f3;
-      position: absolute;
-      top: -90px;
-      left: 100px;
-      z-index: -1;
-    }
-    .text {
-      font-size: 36px;
-      font-weight: 800;
-      position: absolute;
-      top: 40px;
-      left: 220px;
-    }
-  }
-  .service-title-3 {
-    position: relative;
-    .number {
-      font-size: 250px;
-      color: #f3f3f3;
-      position: absolute;
-      top: -90px;
-      left: 100px;
-      z-index: -1;
-    }
-    .text {
-      font-size: 36px;
-      font-weight: 800;
-      position: absolute;
-      top: 40px;
-      left: 220px;
-    }
-  }
-}
-
-.img-row {
-  position: relative;
-  .img-wrapper-1 {
-    // position: relative;
-    // top: 270px;
-    // right: 100px;
+    ul { list-style: none; padding-left: 0; }
+    li::before { content: "\2014"; position: absolute; left: -24px; }
+    .pricing { display: block; text-align: left; }
+    // .service-title-1 { position: relative;
+    //   .number { font-size: 250px; color: #f3f3f3; position: absolute; top: -90px; left: 100px; z-index: -1; }
+    //   .text { font-size: 36px; font-weight: 800; position: absolute; top: 40px; left: 220px; } }
+    .float-img-right { position: absolute; top: 50px; right: 0; z-index: -1; height: 900px; }
+    .float-img-left { position: absolute; top: 1100px; left: 0; z-index: -1; height: 900px; }
   }
 
-  .img-wrapper-2 {
-    // position: relative;
-    // top: 500px;
-  }
-}
-
-.hotline {
-  background-color: #CB333B;
-  color: #ffffff;
-  text-align: center;
-  height: 30px;
-  width: 300px;
-}
-
-
-
-@keyframes textRotate {
-  0% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-    -moz-transform: translateX(-100%);
-    -ms-transform: translateX(-100%);
-    -o-transform: translateX(-100%);
-    transform: translateX(-100%);
+  // popular-products section
+  #popular-products {
+    hr { border-top: 1px solid #565656 !important; }
   }
 }

@@ -12,7 +12,7 @@
 
   <body>
 
-    <%= request.fullpath == root_path ? (render 'layouts/navigation') : (render 'layouts/navigation_2') %>
+    <%= request.fullpath == root_path ? (render 'layouts/navigation_black') : (render 'layouts/navigation_white') %>
     <%= yield %>
     <%= render 'layouts/footer' %>
 

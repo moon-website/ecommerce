@@ -1,11 +1,11 @@
 <% service = @services.first %>
+
 <section id="services" class="my-5 pt-5">
   <div class="container">
     <div class="row mt-5">
       <div class="col">
         <div class="service-title-2">
-          <h2 class="text"><%=service.title_vn%></h2>
-          <span class="number"><%=service.priority %></span>
+          <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552371/Group_11.png", width: "420px", class: "service-title-img", alt: "service-title-img") %>
         </div>
       </div>
       <div class="col">
@@ -13,16 +13,16 @@
           <%=service.description_vn.html_safe%>
         </ul>
         <a href="" class="pricing">Xem bản giá</a>
-        <div style="width: 400px;" class="find-more-wrapper mt-5 pl-3 pt-2">
-          <h4 class="find-more">
+        <div style="width: 400px;" class="red-text-wrapper mt-5 pl-3 pt-2">
+          <h4 class="red-text">
             Gọi đặt lịch ngay 0912 141 241
-            <div style="width: 340px;" class="hr-line-pink"></div>
+            <div style="width: 340px;" class="pink-hr-line"></div>
           </h4>
         </div>
       </div>
     </div>
 
-    <div class="hr-line-big mx-auto my-5"></div>
+    <div class="red-hr-line mx-auto my-5"></div>
     <% if service.sub_services.present?%>
       <% subs = service.sub_services %>
       <% subs.each do |sub|%>
@@ -31,10 +31,10 @@
             <p><%= sub.title_vn %></p>
             <h5><%= sub.price %></h5>
             <%= sub.description_vn.html_safe %>
-            <div style="width: 144px;" class="find-more-wrapper mt-5 pl-3 pt-2">
-              <h4 class="find-more">
+            <div style="width: 144px;" class="red-text-wrapper mt-5 pl-3 pt-2">
+              <h4 class="red-text">
                 Đặt lịch
-                <div style="width: 110px;" class="hr-line-pink"></div>
+                <div style="width: 110px;" class="pink-hr-line"></div>
               </h4>
             </div>
           </div>
@@ -52,7 +52,7 @@
 <section id="client-pictures" class="my-5">
   <div class="container">
     <h1 class="text-center">KHÁCH HÀNG ĐÃ LÀM</h1>
-    <div class="hr-line-big mx-auto my-5"></div>
+    <div class="red-hr-line mx-auto my-5"></div>
     <div class="row my-3">
       <div class="col text-center">
         <img style="width: 100%; object-fit: cover;" src="https://placeimg.com/358/358/any" alt="prod-1">
@@ -115,6 +115,7 @@
     </div>
   </div>
 </section>
+
 <div class="pagination-service hidden">
-<%= will_paginate @services %>
+  <%= will_paginate @services %>
 </div>

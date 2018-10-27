@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   belongs_to :category
-  has_attached_file :image, default_url: "https://placeimg.com/300/400/any"
+  has_attached_file :image, default_url: "https://res.cloudinary.com/buihdk/image/upload/v1538552356/9.png"
 
   validates_attachment_content_type :image, :content_type => ["text/html", "image/svg+xml", "image/jpg", "image/jpeg", "image/png", "image/gif"]
 

@@ -53,6 +53,10 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Add rspec for CircleCI
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'rspec_junit_formatter'
 end
 
 group :development do

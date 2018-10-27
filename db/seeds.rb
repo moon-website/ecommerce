@@ -56,7 +56,7 @@ end
 # Course
 courses_attributes = [
   {
-    name_vn: "Khóa học nối mi căn bản",
+    name_vn: "KHÓA HỌC NỐI MI CƠ BẢN",
     description_vn: " <p>-	Khóa học nối mi One By One và mi Thiên Thần </p>
     <p>
       -	Dụng cụ học tập có thể mua ở MoonEyelash ( với ưu đãi giảm 50%) hoặc học viên tự chuẩn bị
@@ -76,7 +76,7 @@ courses_attributes = [
     price: "8.000.000 VND"
   },
   {
-    name_vn: "Khóa học nối mi nâng cao",
+    name_vn: "KHÓA HỌC NỐI MI NÂNG CAO",
     description_vn: "<p>-	Khóa học nối mi One By One và mi Thiên Thần </p>
     <p>
       -	Dụng cụ học tập có thể mua ở MoonEyelash ( với ưu đãi giảm 50%) hoặc học viên tự chuẩn bị
@@ -90,7 +90,7 @@ courses_attributes = [
     price: "8.000.000 VND"
   },
   {
-    name_vn: "Khóa học nối mi chuyên nghiệp",
+    name_vn: "KHÓA HỌC NỐI MI CHUYÊN NGHIỆP",
     extra_description_vn: " <p class='item-extra'>+ Khoá Điêu khắc lông mày</p>
     <p class='item-extra'>+ Khoá lông mày chuyên nghiệp</p>
     <p class='item-extra'>+ Các lợi ích khi đăng ký</p>
