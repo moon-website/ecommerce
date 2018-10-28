@@ -5,11 +5,15 @@
   height: 52px;
   border: solid 1px #979797;
   text-align: left;
-  .red-text { color: #ff1616; position: relative; z-index: 1; left: 10px; }
-  .pink-hr-line {
-    position: absolute; z-index: -1; top: 16px; left: -10px;
-    width: 176px; height: 16px; background-color: #ffd6d9;
+  .red-text { 
+    color: #ff1616; position: relative; z-index: 1; left: 10px; 
+    display: block; text-decoration: none; font-size: 24px; font-weight: 500;
+    .pink-hr-line {
+      position: absolute; z-index: -1; top: 16px; left: -10px;
+      width: 176px; height: 16px; background-color: #ffd6d9;
+    }
   }
+  
 }
 .blue-text { 
   color: #4A90E2; padding: 10px 0; margin: 0 30px;
