@@ -2,9 +2,11 @@
 
   <!-- Banner section -->
   <header id="banner">
-    <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538840041/banner.png", class: "banner-portrait", alt: "banner-portrait") %>
-    <h2 class="banner-text text-center">Master Nghi Nguyễn</h2>
-    <div class="banner-text-wrap">
+    <div class="banner-portrait-wrap">
+      <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538840041/banner.png", class: "banner-portrait", alt: "banner-portrait") %>
+      <h2 class="banner-portrait-text text-center">Master Nghi Nguyễn</h2>
+    </div>
+    <div class="banner-running-text-wrap">
       <div class="running-text">MOON EYES BROWN EYE SPLASH NAIL</div>
       <div class="running-text">MOON EYES BROWN EYE SPLASH NAIL</div>
       <div class="running-text">MOON EYES BROWN EYE SPLASH NAIL</div>
@@ -128,9 +130,9 @@
             </div>
           </div>
           <div class="col">
-            <p class="text-left">
+            <ul class="text-left">
               <%= @service_nails.description_vn.html_safe %>
-            </p>
+            </ul>
             <a href="" class="pricing">Xem bản giá</a>
             <div class="red-text-wrapper mt-5 pl-3 pt-2">
               <h4 class="red-text">

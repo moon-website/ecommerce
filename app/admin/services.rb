@@ -18,8 +18,8 @@ ActiveAdmin.register Service do
       f.input :title_vn
       f.input :description_en
       f.input :description_vn
-      f.input :greeting_vn
       f.input :greeting_en
+      f.input :greeting_vn
     end
 
     f.inputs "Images" do
