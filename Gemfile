@@ -13,12 +13,13 @@ gem 'devise', '~> 4.4.3'
 gem 'draper', '~> 3.0.1'
 gem 'pundit', '~> 1.1.0'
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3.3'
 gem 'bootstrap', '~> 4.1.3'
+gem 'summernote-rails', '~> 0.8.10.0'
 gem 'will_paginate', '~> 3.1.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
-gem 'paperclip'
+gem 'paperclip', '~> 6.1.0'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
