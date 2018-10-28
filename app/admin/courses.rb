@@ -16,8 +16,8 @@ ActiveAdmin.register Course do
     f.inputs "General Information" do
       f.input :name_en
       f.input :name_vn
-      f.input :description_en
-      f.input :description_vn
+      f.input :description_en, input_html: { class: "summernote"}
+      f.input :description_vn, input_html: { class: "summernote"}
       f.input :schedule_en
       f.input :schedule_vn
       f.input :price
