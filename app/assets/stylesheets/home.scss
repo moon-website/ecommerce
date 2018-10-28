@@ -8,9 +8,20 @@
     height: 520px;
     background-color: #080702;
     position: relative;
-    .banner-portrait { position: absolute; bottom: 0; left: 7rem; }
-    .banner-text { color: white; padding-top: 15rem; }
-    .banner-text-wrap {
+    .banner-portrait-wrap {
+      .banner-portrait { 
+        position: absolute; 
+        bottom: 0; 
+        left: 7rem; 
+      }
+      .banner-portrait-text {
+        position: absolute;
+        top: 15rem; 
+        left: 28rem;
+        color: white; 
+      }
+    }
+    .banner-running-text-wrap {
       position: absolute; left: 0; bottom: 0; width: 100%; z-index: 5;
       font-size: 0; color: #fff; overflow: hidden; padding-bottom: 8.5vh; 
       white-space: nowrap; -webkit-font-smoothing: antialiased;
