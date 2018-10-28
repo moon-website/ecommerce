@@ -94,7 +94,7 @@
       <% if service.priority != "01" %>
         <% pre_service = Service.get_previous_service(service.priority) %>
         <div class="col page-prev d-flex flex-row">
-          <%= image_tag(pre_service.image.url, size: "250x300")%>
+          <%= image_tag(pre_service.represent_image_1.url, size: "250x300", style: "object-fit: cover") %>
           <div class="txt-wrapper mx-3 mt-5 d-flex flex-column">
             <h2><%= pre_service.title_vn %></h2>
             <a href="" class="btn-prev">Previous</a>
@@ -105,7 +105,7 @@
       <% if service.priority != @last_service.priority %>
         <% next_service = Service.get_next_service(service.priority) %>
         <div class="col page-next d-flex flex-row-reverse">
-          <%= image_tag(next_service.image.url, size: "250x300")%>
+          <%= image_tag(next_service.represent_image_1.url, size: "250x300", style: "object-fit: cover") %>
           <div class="txt-wrapper mx-3 mt-5 d-flex flex-column">
             <h2><%= next_service.title_vn %></h2>
             <a href="" class="btn-next">Next</a>
