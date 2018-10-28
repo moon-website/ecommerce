@@ -5,10 +5,9 @@ ActiveAdmin.register Course do
   index do
     selectable_column
     column :id
-    column :name_en
     column :name_vn
-    column :description_en
     column :description_vn
+    column :price
     actions
   end
 
@@ -16,13 +15,13 @@ ActiveAdmin.register Course do
     f.inputs "General Information" do
       f.input :name_en
       f.input :name_vn
-      f.input :description_en
-      f.input :description_vn
+      f.input :description_en, input_html: { class: "summernote"}
+      f.input :description_vn, input_html: { class: "summernote"}
       f.input :schedule_en
       f.input :schedule_vn
       f.input :price
-      f.input :summary_en
-      f.input :summary_vn
+      f.input :summary_en, input_html: { class: "summernote"}
+      f.input :summary_vn, input_html: { class: "summernote"}
     end
 
     f.inputs "Images" do

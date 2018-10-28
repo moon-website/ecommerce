@@ -4,9 +4,7 @@ ActiveAdmin.register SubService do
   index do
     selectable_column
     column :id
-    column :title_en
     column :title_vn
-    column :description_en
     column :description_vn
     actions
   end
@@ -15,10 +13,10 @@ ActiveAdmin.register SubService do
     f.inputs "General Information" do
       f.input :title_en
       f.input :title_vn
-      f.input :description_en
-      f.input :description_vn
+      f.input :description_en, input_html: { class: "summernote"}
+      f.input :description_vn, input_html: { class: "summernote"}
       f.input :price
-      f.input :service_id, :label => 'Service', :as => :select, :collection => Service.all.map{|s| ["#{s.title_vn}", s.id]}
+      f.input :service_id, :label => 'Service', :as => :select, :collection => Service.all.map{|s| ["#{s.title_vn}", s.id]}, selected: object.service_id
     end
 
     f.inputs "Images" do

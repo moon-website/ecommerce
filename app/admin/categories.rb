@@ -4,9 +4,7 @@ ActiveAdmin.register Category do
   index do
     selectable_column
     column :id
-    column :name_en
     column :name_vn
-    column :description_en
     column :description_vn
     actions
   end
@@ -15,8 +13,8 @@ ActiveAdmin.register Category do
     f.inputs "General Information" do
       f.input :name_en
       f.input :name_vn
-      f.input :description_en
-      f.input :description_vn
+      f.input :description_en, input_html: { class: "summernote"}
+      f.input :description_vn, input_html: { class: "summernote"}
     end
 
     f.actions

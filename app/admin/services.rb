@@ -4,7 +4,6 @@ ActiveAdmin.register Service do
   index do
     selectable_column
     column :priority
-    column :title_en
     column :title_vn
     column :greeting_vn
     column :description_vn
@@ -16,10 +15,10 @@ ActiveAdmin.register Service do
       f.input :priority
       f.input :title_en
       f.input :title_vn
-      f.input :description_en
-      f.input :description_vn
-      f.input :greeting_vn
-      f.input :greeting_en
+      f.input :description_en, input_html: { class: "summernote"}
+      f.input :description_vn, input_html: { class: "summernote"}
+      f.input :greeting_en, input_html: { class: "summernote"}
+      f.input :greeting_vn, input_html: { class: "summernote"}
     end
 
     f.inputs "Images" do

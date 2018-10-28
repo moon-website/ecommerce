@@ -23,7 +23,7 @@ jobs: # a collection of steps
       - image: circleci/postgres:9.4.18
         environment: # environment variables for database
           POSTGRES_USER: circleci-postgres
-          POSTGRES_DB: railsapp_test
+          POSTGRES_DB: moon_project_test
           POSTGRES_PASSWORD: ""
 
     steps:
