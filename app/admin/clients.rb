@@ -23,7 +23,7 @@ ActiveAdmin.register Client do
     f.inputs "Images" do
       f.input :image, as: :file
       f.input :creature, as: :file
-      f.input :training_class_id, :label => 'Training class', :as => :select, :collection => TrainingClass.all.map{|s| ["#{s.name}", s.id]}
+      f.input :training_class_id, label: 'Training class', as: :select, collection: TrainingClass.all.map{|s| ["#{s.name}", s.id]}
 
     end
     f.actions
