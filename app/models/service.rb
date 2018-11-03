@@ -25,4 +25,22 @@ class Service < ApplicationRecord
     next_priority = "0"+ (priority.to_i + 1).to_s
     Service.find_by_priority(next_priority)
   end
+
+  def get_description(lan='vn')
+    des = lan=='vn' ? description_vn : description_en
+    return description_vn if des==""
+    des
+  end
+
+  def get_greeting(lan='vn')
+    greeting= lan=='vn' ? greeting_vn : greeting_en
+    return greeting_vn if greeting==""
+    greeting
+  end
+
+  def get_title(lan='vn')
+    title= lan=='vn' ? title_vn : title_en
+    return title_vn if title==""
+    title
+  end
 end

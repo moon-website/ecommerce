@@ -29,11 +29,11 @@
         <% @courses.each do |course| %>
           <div class="col text-left">
             <%= image_tag(course.thumbnail_image.url, size: "300x330")%>
-            <h5 class="pt-4"><%=course.name_vn %></h5>
-            <p><%= course.schedule_vn %></p>
+            <h5 class="pt-4"><%=course.get_name %></h5>
+            <p><%= course.get_schedule %></p>
             <h5>
               Học phí:<br/>
-              <%= course.price %>
+              <%= course.get_price %>
             </h5>
             <div class="red-text-wrapper mt-4 pl-3 pt-2">
               <a class="red-text" href="<%= courses_path %>">
@@ -67,7 +67,7 @@
           </div>
           <div class="col">
             <ul class="text-left">
-              <%= @service_eyebrown.description_vn.html_safe %>
+              <%= @service_eyebrown.get_description.html_safe %>
             </ul>
             <a href="" class="pricing">Xem bản giá</a>
             <div class="red-text-wrapper mt-5 pl-3 pt-2">
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-      
+
       <div class="service-2 py-5">
         <%= image_tag("https://res.cloudinary.com/buihdk/image/upload/v1538552387/Asset_2_2x_Copy.png", class: "float-img-left", alt: "float-img-left") %>
         <div class="row">
@@ -98,7 +98,7 @@
           </div>
           <div class="col">
             <ul class="text-left">
-              <%= @service_eyelashes.description_vn.html_safe %>
+              <%= @service_eyelashes.get_description.html_safe %>
             </ul>
             <a href="" class="pricing">Xem bản giá</a>
             <div class="red-text-wrapper mt-5 pl-3 pt-2">
@@ -131,7 +131,7 @@
           </div>
           <div class="col">
             <ul class="text-left">
-              <%= @service_nails.description_vn.html_safe %>
+              <%= @service_nails.get_description.html_safe %>
             </ul>
             <a href="" class="pricing">Xem bản giá</a>
             <div class="red-text-wrapper mt-5 pl-3 pt-2">
@@ -161,14 +161,14 @@
       <div class="red-hr-line mx-auto my-5"></div>
       <% @categories.each do |cat| %>
         <div class="categories mb-5 pb-5">
-          <h3><%= cat.name_vn%></h3>
+          <h3><%= cat.get_name%></h3>
           <hr>
           <div class="row">
             <% cat.products.limit(3).each do |product|%>
               <div class="col text-center">
                 <%= image_tag(product.image.url, size: "300x400", alt: "product image")%>
-                <h5><%= product.name_vn %></h5>
-                <p><b><%= product.price %></b></p>
+                <h5><%= product.get_name %></h5>
+                <p><b><%= product.get_price %></b></p>
               </div>
             <% end %>
           </div>

@@ -18,7 +18,7 @@ ActiveAdmin.register TrainingClass do
 
     f.inputs "Images" do
       f.input :image, as: :file
-      f.input :course_id, :label => 'Course', as: :select, collection: Course.all.map{|s| ["#{s.name_vn}", s.id]}, selected: object.course_id
+      f.input :course_id, label: 'Course', as: :select, collection: Course.all.map{|s| ["#{s.name_vn}", s.id]}, selected: object.course_id
     end
     f.actions
   end

@@ -17,7 +17,7 @@ ActiveAdmin.register Product do
       f.input :description_en, input_html: { class: "summernote"}
       f.input :description_vn, input_html: { class: "summernote"}
       f.input :price
-      f.input :category_id, :label => 'Category', :as => :select, :collection => Category.all.map{|s| ["#{s.name_vn}", s.id]}, selected: object.category_id
+      f.input :category_id, label: 'Category', as: :select, collection: Category.all.map{|s| ["#{s.name_vn}", s.id]}, selected: object.category_id
     end
 
     f.inputs "Images" do

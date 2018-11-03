@@ -10,10 +10,11 @@ ActiveAdmin.register Service do
     actions
   end
 
+  Prio =['01', '02', '03', '04', '05',  '06', '07']
+
   form do |f|
     f.inputs "General Information" do
-      f.input :priority
-      f.input :title_en
+      f.input :priority, label: 'Priority', as: :select, collection: Prio.map {|p| "#{p}"}, selected: object.priority
       f.input :title_vn
       f.input :description_en, input_html: { class: "summernote"}
       f.input :description_vn, input_html: { class: "summernote"}
